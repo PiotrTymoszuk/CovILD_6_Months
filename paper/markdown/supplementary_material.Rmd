@@ -1,0 +1,358 @@
+---
+title: "Investigating phenotypes of pulmonary COVID-19 recovery – a longitudinal observational prospective multicenter trial"
+subtitle: "Supplementary Material"
+author: "CovILD study team"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+
+output: 
+  pdf_document:
+    latex_engine: xelatex
+bibliography: cov_biblio.bib
+csl: elife.csl
+header-includes:
+  \usepackage{longtable}
+  \usepackage{tabu}
+  \usepackage{caption}
+  \usepackage{makecell}
+  \usepackage{pdflscape}
+  \usepackage{array}
+  \usepackage{booktabs}
+  \usepackage{threeparttable}
+  \usepackage{threeparttablex}
+  \usepackage{wrapfig}
+  \usepackage{multirow}
+  \usepackage[normalem]{ulem}
+  \usepackage{colortbl}
+  \usepackage{xcolor}
+  \usepackage{float} \floatplacement{figure}{H}
+  \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}}       \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+---
+
+```{r, setup, include = FALSE}
+
+library(bookdown)
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+
+```
+
+\newpage
+\beginsupplement
+
+# Supplementary Tables
+
+```{r tab-study-variables}
+
+suppl_tables$study_vars %>% 
+  mutate(`Stratification cutoff` = stri_replace(`Stratification cutoff`, fixed = '\u2265', replacement = 'at least')) %>% 
+  kable(caption = '\\textbf{Study variables.}\\\\Variable: variable name in the analysis pipeline, Reference time point: study visit, the variable was recorded at, Label: variable label in figures and tables.', 
+        format = 'latex', 
+        escape = TRUE, 
+        booktabs = TRUE, 
+        longtable = TRUE) %>% 
+  column_spec(1, width = '4.2cm') %>% 
+  column_spec(2, width = '3.3cm') %>% 
+  column_spec(3, width = '3.5cm') %>% 
+  column_spec(4, width = '1.5cm') %>%
+  column_spec(5, width = '3.3cm') %>% 
+  kable_styling(full_width = F, 
+                latex_options = c('striped', 'repeat_header'), 
+                font_size = 9)
+
+```
+
+\newpage
+
+```{r tab-uni-modeling}
+
+suppl_tables$uni_risk[1, 1] %>%
+  mutate(Outcome = '') %>% 
+  kable(caption = '\\textbf{Results of univariate risk modeling.}\\\\Outcome: outcome variable at the 180-days follow-up visit (V3), Co-variate: explanatory variable, Baseline: reference level of the explanatory variable, OR: odds ratios with 95$\\%$ confidence intervals, pFDR: significance p value corrected for multiple testing with the Benjamini-Hochberg method (FDR: false discovery rate).\\\\The table is available online.', 
+        format = 'latex', 
+        escape = TRUE, 
+        booktabs = TRUE, 
+        longtable = FALSE, 
+        col.names = '') %>% 
+  kable_styling(full_width = F)
+
+```
+
+\newpage
+
+```{r tab-ft-clust}
+
+suppl_tables$clust_assignment %>%
+  kable(caption = '\\textbf{Feature cluster assignment scheme.}', 
+        format = 'latex', 
+        escape = TRUE, 
+        booktabs = TRUE, 
+        longtable = TRUE) %>% 
+  column_spec(1, width = '2.5cm') %>% 
+  column_spec(2, width = '14cm') %>% 
+  collapse_rows(1) %>% 
+  kable_styling(full_width = F, 
+                latex_options = c('striped', 'repeat_header'), 
+                font_size = 9)
+
+```
+
+\newpage
+
+```{r tab-caret}
+
+suppl_tables$optimal_algos %>% 
+  kable(caption = '\\textbf{Development of machine learning models.}\\\\Outcome: outcome variable at the 180-days follow-up visit (V3).', 
+        format = 'latex', 
+        escape = TRUE, 
+        booktabs = TRUE, 
+        longtable = TRUE) %>% 
+  column_spec(1, width = '2.2cm') %>% 
+  column_spec(2, width = '1.2cm') %>% 
+  column_spec(3, width = '1.5cm') %>% 
+  column_spec(4, width = '3.5cm') %>% 
+  column_spec(5, width = '1.7cm') %>% 
+  column_spec(6, width = '5cm') %>% 
+  collapse_rows(1:2) %>% 
+  kable_styling(full_width = F, 
+                latex_options = c('striped', 'repeat_header'), 
+                font_size = 9)
+
+```
+
+\newpage
+
+```{r tab-ml-perf}
+
+suppl_tables$ml_stats_complete[1, 1] %>%
+  mutate(Outcome = '') %>% 
+  kable(caption = '\\textbf{Performance of machine learning classifiers.}\\\\Outcome: outcome variable at the 180-days follow-up visit (V3).\\\\The table is available online.', 
+        format = 'latex', 
+        escape = TRUE, 
+        booktabs = TRUE, 
+        longtable = FALSE, 
+        col.names = '') %>% 
+  kable_styling(full_width = F)
+
+```
+
+```{r tab-ml-severity}
+
+suppl_tables$ml_roc_severity[1, 1] %>%
+  mutate(Outcome = '') %>% 
+  kable(caption = '\\textbf{Performance of machine learning classifiers.}\\\\Outcome: outcome variable at the 180-days follow-up visit (V3), Cohort subset: cohort acute COVID-19 severity strata (mild-moderate: outpatient or hospitalized without oxygen, severe-critical: oxygen therapy or ICU).\\\\The table is available online.', 
+        format = 'latex', 
+        escape = TRUE, 
+        booktabs = TRUE, 
+        longtable = FALSE, 
+        col.names = '') %>% 
+  kable_styling(full_width = F)
+
+```
+
+\newpage
+
+# Supplementary Figures {#sec:figures}
+
+```{r fig-overlap-any-CT, fig.width = mm_inch(suppl_figures$outcome_overlap_anyCT$w), fig.height = mm_inch(suppl_figures$outcome_overlap_anyCT$h), dpi = 600, fig.cap = 'Co-occurrence of any lung CT abnormalities, functional lung impairment and persistent symptoms.'}
+
+suppl_figures$outcome_overlap_anyCT$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-overlap-any-CT). Co-occurrence of any lung CT abnormalities, functional lung impairment and persistent symptoms.__
+
+Numbers and percentages of the study participants with persistent symptoms, functional lung impairment or any lung CT abnormalities at the consecutive follow-up visits presented in Venn diagrams. Numbers of complete observations are shown under the plots.
+
+\newpage
+
+```{r fig-overlap-sev-CT, fig.width = mm_inch(suppl_figures$outcome_overlap_sev$w), fig.height = mm_inch(suppl_figures$outcome_overlap_sev$h), dpi = 600, fig.cap = 'Co-occurrence of any lung CT abnormalities, functional lung impairment and persistent symptoms.'}
+
+suppl_figures$outcome_overlap_sev$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-overlap-sev-CT). Co-occurrence of moderate-to-severe lung CT abnormalities, functional lung impairment and persistent symptoms.__
+
+Numbers and percentages of the study participants with persistent symptoms, functional lung impairment or moderate-to-severe lung CT abnormalities (severity score > 5) at the consecutive follow-up visits presented in Venn diagrams. Numbers of complete observations are shown under the plots.
+
+
+\newpage
+
+```{r fig-outcome-kappa, fig.width = mm_inch(suppl_figures$outcome_kappa$w), fig.height = mm_inch(suppl_figures$outcome_kappa$h), dpi = 600, fig.cap = 'Frequency of mild and moderate-to-severe lung CT abnormalities. Prognostic value of functional lung impairment and persistent symptoms for prediction of radiological lung abnormalities.'}
+
+suppl_figures$outcome_kappa$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-outcome-kappa). Frequency of mild and moderate-to-severe lung CT abnormalities. Prognostic value of functional lung impairment and persistent symptoms for prediction of radiological lung abnormalities.__
+
+__(A)__ Percentages of mild (severity score $\leq$ 5) and moderate-to-severe lung CT abnormalities at the consecutive follow-up visits in the study participants stratified by the severity of acute COVID-19. Statistical significance of frequency differences was determined by $\chi^2$ test for trend corrected for multiple testing with the Benjamini-Hochberg method. Numbers of complete observations are indicated under the plots.
+
+__(B)__ Relevance of functional lung impairment and persistent COVID-19 symptoms at predicting any lung CT abnormalities and moderate-to-severe lung CT abnormalities (severity score > 5) at the consecutive follow-up visits. The concordance of the outcome variables was determined by Cohen's $\kappa$ coefficient. Statistical significance ($\kappa\neq0$) was assessed by two-tailed T test corrected for multiple testing with the Benjamini-Hochberg method. Kappa with 95$%$ confidence intervals and p values are presented as a heat map. Numbers of complete observations are indicated in the plot.
+
+\newpage
+
+```{r fig-ft-clust-qc, fig.width = mm_inch(suppl_figures$ft_clust_qc$w), fig.height = mm_inch(suppl_figures$ft_clust_qc$h), dpi = 600, fig.cap = 'Study feature clustering algorithm.'}
+
+suppl_figures$ft_clust_qc$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-ft-clust-qc). Study feature clustering algorithm.__
+
+Clustering of `r length(cov_univariate$mod_vars)` non-CT and non-lung function binary explanatory variables recorded for acute COVID-19 (V0) or at the early 60-day follow-up visit (V1) (__Supplementary Table \@ref(tab:tab-study-variables)__).
+
+__(A, B)__ Comparison of 'explained' variances (between-cluster to total sum-of-squares ratio, __A__) and cluster stability (mean classification error in 20-fold cross-validation, __B__) in clustering of the data set with several algorithms with k = 3 centers/branches (algorithms: K-means, PAM: partitioning around medoids, HCl ward.D2: hierarchical clustering with ward.D2 method, distances: SMD: simple matching distance, Jaccard, Dice and Cosine).
+
+__(C, D)__ Optimal number of the feature clusters in clustering with the optimally performing PAM algorithm with SMD dissimilarity measure was determined by the bend of the total within-cluster sum-of-squares curve (__C__) and confirmed by good stability (low mean classification error) in 20-fold cross-validation (__D__).
+
+\newpage
+
+```{r fig-ft-heat, fig.width = mm_inch(suppl_figures$ft_heat_map$w), fig.height = mm_inch(suppl_figures$ft_heat_map$h), dpi = 600, fig.cap = 'Semi-supervised clustering of mild and moderate-to-severe lung CT abnormalities, functional lung impairment and persistent symptoms at the 108-day follow-up with parameters of acute COVID-19 and early convalescence.'}
+
+suppl_figures$ft_heat_map$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-ft-heat). Semi-supervised clustering of mild and moderate-to-severe lung CT abnormalities, functional lung impairment and persistent symptoms at the 108-day follow-up with parameters of acute COVID-19 and early convalescence.__
+
+Clusters of `r length(cov_univariate$mod_vars)` non-CT and non-lung function binary explanatory variables recorded for acute COVID-19 (V0) or at the early 60-day follow-up visit (V1) (__Supplementary Table \@ref(tab:tab-study-variables)__) were defined by the optimally performing PAM algorithm and SMD (simple matching distance) dissimilarity measure (__Figure 6A__, __Supplementary Figure \@ref(fig:fig-ft-clust-qc)__, __Supplementary Table \@ref(tab:tab-ft-clust)__).  The cluster assignment for the outcome variables  at the 180-day follow-up visit (V3, persistent symptoms, functional lung impairment, mild lung CT abnormalities [severity score $\leq$ 5] and moderate-to-severe lung CT abnormalities [severity score > 5]) was predicted by k-nearest neighbor (k-NN) label propagation procedure.
+SMD between the features and their cluster assignments are shown in a heat map. Numbers of the features in the clusters and the total number of observations are indicated under the plot.
+
+CVD: cardiovascular disease, Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quartile, GI: gastrointestinal, PD: pulmonary disease, GITD: gastrointestinal disease, ICU: intensive care unit, COPD: chronic obstructive pulmonary disease, CKD: chronic kidney disease.
+
+\newpage
+
+```{r fig-part-clust-qc, fig.width = mm_inch(suppl_figures$part_clust_qc$w), fig.height = mm_inch(suppl_figures$part_clust_qc$h), dpi = 600, fig.cap = 'Study participant clustering algorithm.'}
+
+suppl_figures$part_clust_qc$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-part-clust-qc). Study participant clustering algorithm.__
+
+Clustering of the study participants (n = `r nrow(part_clust$analysis_tbl)` with the complete variable set) in respect to `r length(cov_univariate$mod_vars)` non-CT and non-lung function binary explanatory variables recorded for acute COVID-19 (V0) or at the early 60-day follow-up visit (V1) (__Supplementary Table \@ref(tab:tab-study-variables)__). The procedure involved clustering of the observations with self-organizing maps (SOM, 4 $\times$ 4 hexagonal grid, distances: SMD: simple matching distance, Jaccard, Dice or cosine) followed by clustering of the SOM nodes (algorithms: HCl ward.D2: hierarchical clustering with Ward.D2 method, K-means, PAM: partitioning around medoids, distance: euclidean). Different combinations of observation dissimilarity measures and SOM node clustering algorithms were tested at the search for the optimal clustering algorithm.
+
+__(A, B)__ Comparison of 'explained' variances (between-cluster to total sum-of-squares ratio, __A__) and cluster stability (mean classification error in 20-fold cross-validation, __B__) in clustering of the data set with different observation distance measures and SOM node clustering algorithms.
+
+__(C - E)__ Optimal number of the SOM node clusters in clustering with the optimally performing SOM HCl algorithm with SMD observation dissimilarity measure. The optimal cluster number was determined by the bend of the total within-cluster sum-of-squares curve (__C__) and confirmed by visual inspection of the HCl dendrogram (__E__) and good stability (low mean classification error) in 20-fold cross-validation (__D__).
+
+\newpage
+
+```{r fig-part-clust-impact, fig.width = mm_inch(suppl_figures$part_clust_fct$w), fig.height = mm_inch(suppl_figures$part_clust_fct$h), dpi = 600, fig.cap = 'Impact of particular variables on the quality of participant clustering.'}
+
+suppl_figures$part_clust_fct$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-part-clust-impact). Impact of particular variables on the quality of participant clustering.__
+
+Participants clusters were defined with the optimally performing HCl algorithm with SMD observation dissimilarity measure as presented in __Figure 7__ and __Supplementary Figure \@ref(fig:fig-part-clust-qc)__. The impact of a particular clustering variable was determined by comparing the 'explained' clustering variance (between-cluster to total sum-of-squares ratio) between the initial cluster structure and the structure wit random re-shuffling of the variable ('noising'). Differences in the clustering variances for the most influential clustering variables ($\Delta$ clustering variance > 0) are presented in the plot.
+
+Q1, Q3: 1^st^, 3^rd^ quartile, CKD: chronic kidney disease, GI: gastrointestinal, CVD: cardiovascular disease, PD: pulmonary disease, GITD: gastrointestinal disease, V0: acute COVID-19, V1: 60-day follow-up visit.
+
+\newpage
+
+```{r fig-part-clust-risk, fig.width = mm_inch(suppl_figures$part_clust_risk$w), fig.height = mm_inch(suppl_figures$part_clust_risk$h), dpi = 600, fig.cap = 'Risk of radiological lung abnormalities at the 180-day follow-up in the participant clusters.'}
+
+suppl_figures$part_clust_risk$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-part-clust-risk). Risk of radiological lung abnormalities at the 180-day follow-up in the participant clusters.__
+
+Participants clusters were defined by non-lung function and non-CT clinical features of acute COVID-19 and early convalescence (60-day follow-up visit, __Supplementary Table \@ref(tab:tab-study-variables)__) with the optimally performing HCl algorithm with SMD observation dissimilarity measure as presented in __Figure 7__ and __Supplementary Figure \@ref(fig:fig-part-clust-qc)__. Association of the participant cluster assignment (LR: low-risk, IR: intermediate-risk, HR: high-risk cluster) with the risk of any lung CT abnormalities and moderate-to-severe lung CT abnormalities (severity score > 5) at the 180-day follow-up visit (V3) was investigated by logistic modeling with and without inclusion of the acute COVID-19 severity effect (severity-adjusted). Odds ratio (OR) significance was determined by Wald Z test and corrected for multiple testing with the Benjamini-Hochberg method. OR wit 95$%$ confidence intervals are presented in Forest plots. Numbers of complete observations, outcome events, participants in the clusters and the acute COVID-19 severity subsets are indicated under the plot.
+
+\newpage
+
+```{r fig-mod-cor, fig.width = mm_inch(suppl_figures$mod_cor$w), fig.height = mm_inch(suppl_figures$mod_cor$h), dpi = 600, fig.cap = 'Correlation of the machine learning algorithm prediction accuracy.'}
+
+suppl_figures$mod_cor$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-mod-cor). Correlation of the machine learning algorithm prediction accuracy.__
+
+Machine learning classifiers (C5.0, RF: random forests, SVM-R: support vector machines with radial kernel, NNet: neural network, glmNet: elastic net) were trained in the cohort data set with `r length(cov_univariate$mod_vars)` non-CT and non-lung function binary explanatory variables recorded for acute COVID-19 (V0) or at the early 60-day follow-up visit (V1) (__Supplementary Table \@ref(tab:tab-study-variables)__) for predicting outcome variables at the 180-day follow-up visit (V3, any lung CT abnormalities, moderate-to-severe lung CT abnormalities [severity score > 5], functional lung impairment and persistent symptoms) (__Figure 9__, __Supplementary Table \@ref(tab:tab-caret)__). The prediction accuracy was verified by repeated 20-fold cross-validation (5 repeats).
+Pearson's correlation coefficients of the classifier prediction accuracy in the cross-validation are presented as heat maps. Numbers of complete observations and outcome events are indicated under the plots.
+
+\newpage
+
+```{r fig-mod-ens, fig.width = mm_inch(suppl_figures$ensemble$w), fig.height = mm_inch(suppl_figures$ensemble$h), dpi = 600, fig.cap = 'Machine learning model ensembles.'}
+
+suppl_figures$ensemble$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-mod-ens). Machine learning model ensembles.__
+
+Single machine learning classifiers (C5.0, RF: random forests, SVM-R: support vector machines with radial kernel, NNet: neural network, glmNet: elastic net) were trained as shown in __Figure 9__ and __Supplementary Figure \@ref(fig:fig-mod-cor)__. The model ensembles based on the single classifiers were constructed with the elastic net (glmNet) procedure (__Supplementary Table \@ref(tab:tab-caret)__). Elastic net regression coefficients ($\beta$) are presented in the plots. Point and text color corresponds to the $\beta$ value. Numbers of complete observations and outcome events are indicated under the plots.
+
+\newpage
+
+```{r fig-ml-training, fig.width = mm_inch(suppl_figures$ml_train_cohort$w), fig.height = mm_inch(suppl_figures$ml_train_cohort$h), dpi = 600, fig.cap = 'Prediction of persistent radiological lung abnormalities, functional lung impairment and symptoms by machine learning algorithms in the training data sets.'}
+
+suppl_figures$ml_train_cohort$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-ml-training). Prediction of persistent radiological lung abnormalities, functional lung impairment and symptoms by machine learning algorithms in the training data sets.__
+
+Single machine learning classifiers (C5.0, RF: random forests, SVM-R: support vector machines with radial kernel, NNet: neural network, glmNet: elastic net) and their ensembles were trained as shown in __Figure 9__ and __Supplementary Figure \@ref(fig:fig-mod-cor)__ and __\@ref(fig:fig-mod-ens)__. Performance of the classifiers in the training data sets was investigated by receiver operating characteristic (ROC) of the algorithms (AUC: area under the curve, Sens: sensitivity, Spec: specificity, __Supplementary Table \@ref(tab:tab-ml-perf)__). Numbers of complete observations and outcome events are indicated under the plots.
+
+\newpage
+
+```{r fig-importance-any, fig.width = mm_inch(suppl_figures$importance_any_ct$w), fig.height = mm_inch(suppl_figures$importance_any_ct$h), dpi = 600, fig.cap = 'Variable importance statistics for prediction of any lung CT abnormalities at the 180-day follow-up by machine learning classifiers.'}
+
+suppl_figures$importance_any_ct$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-importance-any). Variable importance statistics for prediction of any lung CT abnormalities at the 180-day follow-up by machine learning classifiers.__
+
+C5.0, random forests (RF) and elastic net (glmNet) classifiers were were trained as presented in __Figure 9__ and __Supplementary Figure \@ref(fig:fig-mod-cor)__ for prediction of any lung CT abnormalities at the 180-day follow-up visit (V3). Variable importance measures (C5.0: % attribute/variable usage in the tree model, RF: difference in Gini index, glmNet: absolute value of the regression coefficient $\beta$) for the 10 most influential explanatory variables are presented.
+
+CKD: chronic kidney disease, Q1, Q4: 1^st^, 4^th^ quartile, PD: pulmonary disease, CKD: chronic kidney disease, V0: acute COVID-19, V1: 60-day follow-up visit.
+
+\newpage
+
+```{r fig-importance-severe, fig.width = mm_inch(suppl_figures$importance_ct_severe$w), fig.height = mm_inch(suppl_figures$importance_ct_severe$h), dpi = 600, fig.cap = 'Variable importance statistics for prediction of moderate-to-severe lung CT abnormalities at the 180-day follow-up by machine learning classifiers.'}
+
+suppl_figures$importance_ct_severe$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-importance-severe). Variable importance statistics for prediction of moderate-to-severe lung CT abnormalities at the 180-day follow-up by machine learning classifiers.__
+
+C5.0, random forests (RF) and elastic net (glmNet) classifiers were were trained as presented in __Figure 9__ and __Supplementary Figure \@ref(fig:fig-mod-cor)__ for prediction of moderate-to-severe lung CT abnormalities (severity score > 5) at the 180-day follow-up visit (V3). Variable importance measures (C5.0: % attribute/variable usage in the tree model, RF: difference in Gini index, glmNet: absolute value of the regression coefficient $\beta$) for the 10 most influential explanatory variables are presented.
+
+PD: pulmonary disease, GITD: gastrointestinal disease, Q1, Q2, Q4: 1^st^, 2^nd^, 4^th^ quartile, V0: acute COVID-19, V1: 60-day follow-up visit.
+
+\newpage
+
+```{r fig-importance-lufo, fig.width = mm_inch(suppl_figures$importance_lufo$w), fig.height = mm_inch(suppl_figures$importance_lufo$h), dpi = 600, fig.cap = 'Variable importance statistics for prediction of functional lung impairment at the 180-day follow-up by machine learning classifiers.'}
+
+suppl_figures$importance_lufo$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-importance-lufo). Variable importance statistics for prediction of functional lung impairment at the 180-day follow-up by machine learning classifiers.__
+
+C5.0, random forests (RF) and elastic net (glmNet) classifiers were were trained as presented in __Figure 9__ and __Supplementary Figure \@ref(fig:fig-mod-cor)__ for prediction of functional lung impairment at the 180-day follow-up visit (V3). Variable importance measures (C5.0: % attribute/variable usage in the tree model, RF: difference in Gini index, glmNet: absolute value of the regression coefficient $\beta$) for the 10 most influential explanatory variables are presented.
+
+CKD: chronic kidney disease, Q1, Q2: 1^st^. 2^nd^ quartile, V0: acute COVID-19, V1: 60-day follow-up visit.
+
+\newpage
+
+```{r fig-importance-sympt, fig.width = mm_inch(suppl_figures$importance_symptoms$w), fig.height = mm_inch(suppl_figures$importance_symptoms$h), dpi = 600, fig.cap = 'Variable importance statistics for prediction of persistent symptoms at the 180-day follow-up by machine learning classifiers.'}
+
+suppl_figures$importance_symptoms$plot
+
+```
+
+__Supplementary Figure \@ref(fig:fig-importance-sympt). Variable importance statistics for prediction of persistent symptoms at the 180-day follow-up by machine learning classifiers.__
+
+C5.0, random forests (RF) and elastic net (glmNet) classifiers were were trained as presented in __Figure 9__ and __Supplementary Figure \@ref(fig:fig-mod-cor)__ for prediction of persistent symptoms at the 180-day follow-up visit (V3). Variable importance measures (C5.0: % attribute/variable usage in the tree model, RF: difference in Gini index, glmNet: absolute value of the regression coefficient $\beta$) for the 10 most influential explanatory variables are presented.
+
+CVD: cardiovascular disease, GITD: gastrointestinal disease, COPD: chronic obstructive lung disease, V0: acute COVID-19, V1: 60-day follow-up visit.

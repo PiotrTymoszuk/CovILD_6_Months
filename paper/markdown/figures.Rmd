@@ -1,0 +1,180 @@
+---
+title: "Investigating phenotypes of pulmonary COVID-19 recovery – a longitudinal observational prospective multicenter trial"
+subtitle: "Figures"
+author: "CovILD study team"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+
+output: 
+  pdf_document:
+    latex_engine: xelatex
+bibliography: cov_biblio.bib
+csl: elife.csl
+header-includes:
+  \usepackage{longtable}
+  \usepackage{tabu}
+  \usepackage{caption}
+  \usepackage{makecell}
+  \usepackage{pdflscape}
+  \usepackage{array}
+  \usepackage{booktabs}
+  \usepackage{threeparttable}
+  \usepackage{threeparttablex}
+  \usepackage{wrapfig}
+  \usepackage{multirow}
+  \usepackage[normalem]{ulem}
+  \usepackage{colortbl}
+  \usepackage{xcolor}
+  \usepackage{float} \floatplacement{figure}{H}
+  \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}}       \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+---
+
+```{r, setup, include = FALSE}
+
+library(bookdown)
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+
+```
+
+\newpage
+
+# Figures {#sec:figures}
+
+```{r fig-analysis-scheme, fig.width = mm_inch(paper_figures$analysis_scheme$w), fig.height = mm_inch(paper_figures$analysis_scheme$h), dpi = 600, fig.cap = 'Study inclusion flow diagram and analysis scheme.'}
+
+paper_figures$analysis_scheme$plot
+
+```
+
+__Figure \@ref(fig:fig-analysis-scheme). Study inclusion flow diagram and analysis scheme.__
+
+\newpage
+
+```{r fig-sympt-recovery, fig.width = mm_inch(paper_figures$sympt_recovery$w), fig.height = mm_inch(paper_figures$sympt_recovery$h), dpi = 600, fig.cap = 'Kinetic of recovery from COVID-19 symptoms.'}
+
+paper_figures$sympt_recovery$plot
+
+```
+
+__Figure \@ref(fig:fig-sympt-recovery). Kinetic of recovery from COVID-19 symptoms.__
+
+Recovery from any COVID-19 symptoms in the participants stratified by acute COVID-19 severity (__A__) and particular complaints in the entire cohort (__B__) was investigated by mixed-effect logistic modeling (random effect: individual, fixed effect: time). Significance was determined by likelihood ratio test and p values corrected for multiple testing with the Benjamini-Hochberg method. Percents of individuals with symptoms at the indicated time points are presented, p values and numbers of complete observations are indicated in the plots. 
+
+imp.: impaired.
+
+\newpage
+
+```{r fig-pulmo-recovery, fig.width = mm_inch(paper_figures$pulmo_recovery$w), fig.height = mm_inch(paper_figures$pulmo_recovery$h), dpi = 600, fig.cap = 'Kinetic of pulmonary recovery.'}
+
+paper_figures$pulmo_recovery$plot
+
+```
+
+__Figure \@ref(fig:fig-pulmo-recovery). Kinetic of pulmonary recovery.__
+
+Recovery from any lung CT abnormalities, moderate-to-severe lung CT abnormalities (severity score > 5) and functional lung impairment was investigated in the participants stratified by acute COVID-19 severity by mixed-effect logistic modeling (random effect: individual, fixed effect: time). Significance was determined by likelihood ratio test and p values corrected for multiple testing with the Benjamini-Hochberg method. Percents of individuals with the given abnormality at the indicated time points are presented, p values and numbers of complete observations are indicated in the plots.
+
+\newpage
+
+```{r fig-model-ct, fig.width = mm_inch(paper_figures$uni_mod_ct$w), fig.height = mm_inch(paper_figures$uni_mod_ct$h), dpi = 600, fig.cap = 'Risk factors of developing persistent radiological lung abnormalities.'}
+
+paper_figures$uni_mod_ct$plot
+
+```
+
+__Figure \@ref(fig:fig-model-ct). Risk factors of developing persistent radiological lung abnormalities.__
+
+Association of `r length(cov_univariate$mod_vars)` binary explanatory variables (__Supplementary Table S1__) with the presence of any lung CT abnormalities (__A__) or moderate-to-severe lung CT abnormalities (severity score > 5, __B__) at the 180-day follow-up visit (V3) was investigated with a series of univariate logistic models (__Supplementary Table S2__). Odds ratio (OR) significance was determined by Wald Z test and corrected for multiple testing with the Benjamini-Hochberg method. OR with 95$\%$ confidence intervals for significant favorable and unfavorable factors are presented in Forest plots. Model baseline (ref) and numbers of complete observations are presented in the plot axis text. 
+
+Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quartile, ICU: intensive care unit.
+
+\newpage
+
+```{r fig-model-lufo, fig.width = mm_inch(paper_figures$uni_mod_lufo$w), fig.height = mm_inch(paper_figures$uni_mod_lufo$h), dpi = 600, fig.cap = 'Risk factors of developing persistent functional lung impairment.'}
+
+paper_figures$uni_mod_lufo$plot
+
+```
+
+__Figure \@ref(fig:fig-model-lufo). Risk factors of developing persistent functional lung impairment.__
+
+Association of `r length(cov_univariate$mod_vars)` binary explanatory variables (__Supplementary Table S1__) with the presence of functional lung impairment at the 180-day follow-up visit (V3) was investigated with a series of univariate logistic models (__Supplementary Table S2__). Odds ratio (OR) significance was determined by Wald Z test and corrected for multiple testing with the Benjamini-Hochberg method. OR with 95$\%$ confidence intervals for the significant favorable and unfavorable factors are presented in a Forest plot. Model baseline (ref) and n numbers of complete observations are presented in the plot axis text. 
+
+Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quartile.
+
+\newpage
+
+```{r fig-ft-clustering, fig.width = mm_inch(paper_figures$ft_clustering$w), fig.height = mm_inch(paper_figures$ft_clustering$h), dpi = 600, fig.cap = 'Association of incomplete symptom, lung function and radiological lung recovery with demographic and clinical parameters of acute COVID-19 and early recovery.'}
+
+paper_figures$ft_clustering$plot
+
+```
+
+__Figure \@ref(fig:fig-ft-clustering). Association of incomplete symptom, lung function and radiological lung recovery with demographic and clinical parameters of acute COVID-19 and early recovery.__
+
+Clustering of `r length(cov_univariate$mod_vars)` non-CT and non-lung function binary explanatory variables recorded for acute COVID-19 (V0) or at the early 60-day follow-up visit (V1) (__Supplementary Table S1__) was investigated by PAM algorithm with simple matching distance (SMD) dissimilarity measure (__Supplementary Figure S4__, __Supplementary Table S3__). The cluster assignment for the outcome variables  at the 180-day follow-up visit (V3, persistent symptoms, functional lung impairment, mild lung CT abnormalities [severity score $\leq$ 5] and moderate-to-severe lung CT abnormalities [severity score > 5]) was predicted by k-nearest neighbor (k-NN) label propagation procedure. Numbers of complete observations and numbers of features in the clusters are indicated in (__A__).
+
+__(A)__ Cluster assignment of the outcome variables (diamonds) presented in the plot of principal component (PC) scores. First two major PC are displayed. The explanatory variables are visualized as points. Percentages of the data set variance associated with the PC are presented in the plot axes.
+
+__(B)__ Ten nearest neighbors (lowest SMD) of the outcome variables presented in radial plots. Font size, point radius and color code for SMD values.
+
+Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quartile, GITD: gastrointestinal disease, CKD: chronic kidney disease, ICU: intensive care unit, COPD: chronic obstructive pulmonary disease.
+
+\newpage
+
+```{r fig-part-clustering, fig.width = mm_inch(paper_figures$som_clustering$w), fig.height = mm_inch(paper_figures$som_clustering$h), dpi = 600, fig.cap = 'Clustering of the study participants by non-lung function and non-CT clinical features.'}
+
+paper_figures$som_clustering$plot
+
+```
+
+__Figure \@ref(fig:fig-part-clustering). Clustering of the study participants by non-lung function and non-CT clinical features.__
+
+Study participants (n = `r nrow(part_clust$analysis_tbl)` with the complete variable set) were clustered in respect to `r length(cov_univariate$mod_vars)` non-CT and non-lung function binary explanatory variables recorded for acute COVID-19 (V0) or at the early 60-day follow-up visit (V1) (__Supplementary Table S1__) using a combined self-organizing map (SOM, simple matching distance) and hierarchical clustering (Ward.D2 method, euclidean distance) procedure (__Supplementary Figure S5__). Numbers of participants assigned to low-risk (LR), intermediate-risk (IR) and high-risk (HR) clusters are indicated in (__A__).
+
+__(A)__  Cluster assignment of the study participants in the plot of principal component (PC) scores. First two major PC are displayed. Percentages of the data set variance associated with the PC are presented in the plot axes.
+
+__(B)__ Presence of the most influential clustering features (__Supplementary Figure S7__) in the participant clusters presented as a heat map. Cluster #1, #2 and #3 refer to the feature clusters defined in __Figure \@ref(fig:fig-ft-clustering)__.
+
+Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quartile, GITD: gastrointestinal disease, CKD: chronic kidney disease, CVD: cardiovascular disease, GI: gastrointestinal, PD: pulmonary disease.
+
+\newpage
+
+```{r fig-clust-outcome, fig.width = mm_inch(paper_figures$som_outcomes$w), fig.height = mm_inch(paper_figures$som_outcomes$h), dpi = 600, fig.cap = 'Frequency of persistent radiological lung abnormalities, functional lung impairment and symptoms in the participant clusters.'}
+
+paper_figures$som_outcomes$plot
+
+```
+
+__Figure \@ref(fig:fig-clust-outcome). Frequency of persistent radiological lung abnormalities, functional lung impairment and symptoms in the participant clusters.__
+
+Clusters of study participants were defined by non-lung function and non-CT features as presented in __Figure \@ref(fig:fig-part-clustering)__. Frequencies of outcome variables at the 180-day follow-up visit (V3, mild [severity score $\leq$ 5], moderate-to-severe lung CT abnormalities [severity score > 5)], functional lung impairment and persistent symptoms) were compared between the low-risk (LR), intermediate-risk (IR) and high-risk (HR) participant clusters by $\chi^2$ test corrected for multiple testing with the Benjamini-Hochberg method. P values and numbers of participants assigned to the clusters are indicated in the plots.
+
+__(A)__ Frequencies of the outcome features in the participant clusters.
+
+__(B)__ Frequencies of the particular symptoms in the participant clusters.
+
+\newpage
+
+```{r fig-ml, fig.width = mm_inch(paper_figures$ml$w), fig.height = mm_inch(paper_figures$ml$h), dpi = 600, fig.cap = 'Prediction of persistent radiological lung abnormalities, functional lung impairment and symptoms by machine learning algorithms.'}
+
+paper_figures$ml$plot
+
+```
+
+__Figure \@ref(fig:fig-ml). Prediction of persistent radiological lung abnormalities, functional lung impairment and symptoms by machine learning algorithms.__
+
+Single machine learning classifiers (C5.0, RF: random forests, SVM-R: support vector machines with radial kernel, NNet: neural network, glmNet: elastic net) and their ensemble (Ens) were trained in the cohort data set with `r length(cov_univariate$mod_vars)` non-CT and non-lung function binary explanatory variables recorded for acute COVID-19 (V0) or at the early 60-day follow-up visit (V1) (__Supplementary Table S1__) for predicting outcome variables at the 180-day follow-up visit (V3, any lung CT abnormalities, moderate-to-severe lung CT abnormalities [severity score > 5], functional lung impairment and persistent symptoms) (__Supplementary Table S4__). The prediction accuracy was verified by repeated 20-fold cross-validation (5 repeats). Receiver operating characteristic (ROC) of the algorithms in the cross-validation are presented: area under the curve (AUC), sensitivity (Sens) and specificity (Spec) (__Supplementary Table S5__). Numbers of complete observations and outcome events are indicated under the plots.
+
+\newpage
+
+```{r fig-ml-severity, fig.width = mm_inch(paper_figures$ml_severity$w), fig.height = mm_inch(paper_figures$ml_severity$h), dpi = 600, fig.cap = 'Performance of the machine learning ensemble classifier in mild-to-moderate and severe-to-critical COVID-19 convalescents.'}
+
+paper_figures$ml_severity$plot
+
+```
+
+__Figure \@ref(fig:fig-ml-severity). Performance of the machine learning ensemble classifier in mild-to-moderate and severe-to-critical COVID-19 convalescents.__
+
+The machine learning classifier ensemble (Ens) was developed as presented in __Figure \@ref(fig:fig-ml)__. Its performance at predicting outcome variables at the 180-day follow-up visit (V3, any CT lung abnormalities, moderate-to-severe lung CT abnormalities [severity score > 5], functional lung impairment and persistent symptoms in the entire cohort, mild-to-moderate (outpatient or hospitalized without oxygen) and severe-to-critical COVID-19 convalescents (oxygen therapy or ICU) in repeated 20-fold cross-validation (5 repeats) was assessed by receiver operating characteristic (ROC) (__Supplementary Table S6__). ROC curves and statistics (AUC: area under the curve, Se: sensitivity, Sp: specificity) in the cross-validation are shown. Numbers of complete observations and outcome events are indicated in the plots.

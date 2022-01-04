@@ -6,18 +6,10 @@
 
 # listing scripts ----
 
-  executable_scripts <- c('data_import.R', ## OK
-                          'symptom_recovery.R', ## OK
-                          'lung_analyses.R', ## OK
-                          'univariate_modeling.R', ## OK
-                          'feature_clustering.R', ## OK
-                          'participant_clustering.R', ## OK
-                          'clustering_verification.R', ## OK
-                          'knn_cohort_size.R', ## OK
-                          'k_NN_predictions.R', ## OK
-                          'kNN_verification.R', ## OK
-                          'paper_figures.R') ## OK
-  
+  executable_scripts <- c('data_import.R', 
+                          'data_analysis.R', 
+                          'render_paper.R') 
+
 # error container ----
   
   exec_errors <- list()
