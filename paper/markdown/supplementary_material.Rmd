@@ -154,9 +154,9 @@ suppl_tables$ml_roc_severity[1, 1] %>%
 
 # Supplementary Figures {#sec:figures}
 
-```{r fig-overlap-any-CT, fig.width = mm_inch(suppl_figures$outcome_overlap_anyCT$w), fig.height = mm_inch(suppl_figures$outcome_overlap_anyCT$h), dpi = 600, fig.cap = 'Co-occurrence of any lung CT abnormalities, functional lung impairment and persistent symptoms.'}
+```{r fig-overlap-any-CT, fig.width = width(suppl_figures$outcome_overlap_anyCT), fig.height = height(suppl_figures$outcome_overlap_anyCT), dpi = 600, fig.cap = 'Co-occurrence of any lung CT abnormalities, functional lung impairment and persistent symptoms.'}
 
-suppl_figures$outcome_overlap_anyCT$plot
+plot(suppl_figures$outcome_overlap_anyCT)
 
 ```
 
@@ -166,9 +166,9 @@ Numbers and percentages of the study participants with persistent symptoms, func
 
 \newpage
 
-```{r fig-overlap-sev-CT, fig.width = mm_inch(suppl_figures$outcome_overlap_sev$w), fig.height = mm_inch(suppl_figures$outcome_overlap_sev$h), dpi = 600, fig.cap = 'Co-occurrence of any lung CT abnormalities, functional lung impairment and persistent symptoms.'}
+```{r fig-overlap-sev-CT, fig.width = width(suppl_figures$outcome_overlap_sev), fig.height = height(suppl_figures$outcome_overlap_sev), dpi = 600, fig.cap = 'Co-occurrence of any lung CT abnormalities, functional lung impairment and persistent symptoms.'}
 
-suppl_figures$outcome_overlap_sev$plot
+plot(suppl_figures$outcome_overlap_sev)
 
 ```
 
@@ -179,9 +179,9 @@ Numbers and percentages of the study participants with persistent symptoms, func
 
 \newpage
 
-```{r fig-outcome-kappa, fig.width = mm_inch(suppl_figures$outcome_kappa$w), fig.height = mm_inch(suppl_figures$outcome_kappa$h), dpi = 600, fig.cap = 'Frequency of mild and moderate-to-severe lung CT abnormalities. Prognostic value of functional lung impairment and persistent symptoms for prediction of radiological lung abnormalities.'}
+```{r fig-outcome-kappa, fig.width = width(suppl_figures$outcome_kappa), fig.height = height(suppl_figures$outcome_kappa), dpi = 600, fig.cap = 'Frequency of mild and moderate-to-severe lung CT abnormalities. Prognostic value of functional lung impairment and persistent symptoms for prediction of radiological lung abnormalities.'}
 
-suppl_figures$outcome_kappa$plot
+plot(suppl_figures$outcome_kappa)
 
 ```
 
@@ -193,9 +193,9 @@ __(B)__ Relevance of functional lung impairment and persistent COVID-19 symptoms
 
 \newpage
 
-```{r fig-ft-clust-qc, fig.width = mm_inch(suppl_figures$ft_clust_qc$w), fig.height = mm_inch(suppl_figures$ft_clust_qc$h), dpi = 600, fig.cap = 'Study feature clustering algorithm.'}
+```{r fig-ft-clust-qc, fig.width = width(suppl_figures$ft_clust_qc), fig.height = height(suppl_figures$ft_clust_qc), dpi = 600, fig.cap = 'Study feature clustering algorithm.'}
 
-suppl_figures$ft_clust_qc$plot
+plot(suppl_figures$ft_clust_qc)
 
 ```
 
@@ -209,9 +209,9 @@ __(C, D)__ Optimal number of the feature clusters in clustering with the optimal
 
 \newpage
 
-```{r fig-ft-heat, fig.width = mm_inch(suppl_figures$ft_heat_map$w), fig.height = mm_inch(suppl_figures$ft_heat_map$h), dpi = 600, fig.cap = 'Semi-supervised clustering of mild and moderate-to-severe lung CT abnormalities, functional lung impairment and persistent symptoms at the 108-day follow-up with parameters of acute COVID-19 and early convalescence.'}
+```{r fig-ft-heat, fig.width = width(suppl_figures$ft_heat_map), fig.height = height(suppl_figures$ft_heat_map), dpi = 600, fig.cap = 'Semi-supervised clustering of mild and moderate-to-severe lung CT abnormalities, functional lung impairment and persistent symptoms at the 108-day follow-up with parameters of acute COVID-19 and early convalescence.'}
 
-suppl_figures$ft_heat_map$plot
+plot(suppl_figures$ft_heat_map)
 
 ```
 
@@ -224,9 +224,9 @@ CVD: cardiovascular disease, Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quart
 
 \newpage
 
-```{r fig-part-clust-qc, fig.width = mm_inch(suppl_figures$part_clust_qc$w), fig.height = mm_inch(suppl_figures$part_clust_qc$h), dpi = 600, fig.cap = 'Study participant clustering algorithm.'}
+```{r fig-part-clust-qc, fig.width = width(suppl_figures$part_clust_qc), fig.height = height(suppl_figures$part_clust_qc), dpi = 600, fig.cap = 'Study participant clustering algorithm.'}
 
-suppl_figures$part_clust_qc$plot
+plot(suppl_figures$part_clust_qc)
 
 ```
 
@@ -240,9 +240,9 @@ __(C - E)__ Optimal number of the SOM node clusters in clustering with the optim
 
 \newpage
 
-```{r fig-part-clust-impact, fig.width = mm_inch(suppl_figures$part_clust_fct$w), fig.height = mm_inch(suppl_figures$part_clust_fct$h), dpi = 600, fig.cap = 'Impact of particular variables on the quality of participant clustering.'}
+```{r fig-part-clust-impact, fig.width = width(suppl_figures$part_clust_fct), fig.height = height(suppl_figures$part_clust_fct), dpi = 600, fig.cap = 'Impact of particular variables on the quality of participant clustering.'}
 
-suppl_figures$part_clust_fct$plot
+plot(suppl_figures$part_clust_fct)
 
 ```
 
@@ -254,9 +254,9 @@ Q1, Q3: 1^st^, 3^rd^ quartile, CKD: chronic kidney disease, GI: gastrointestinal
 
 \newpage
 
-```{r fig-part-clust-risk, fig.width = mm_inch(suppl_figures$part_clust_risk$w), fig.height = mm_inch(suppl_figures$part_clust_risk$h), dpi = 600, fig.cap = 'Risk of radiological lung abnormalities at the 180-day follow-up in the participant clusters.'}
+```{r fig-part-clust-risk, fig.width = width(suppl_figures$part_clust_risk), fig.height = height(suppl_figures$part_clust_risk), dpi = 600, fig.cap = 'Risk of radiological lung abnormalities at the 180-day follow-up in the participant clusters.'}
 
-suppl_figures$part_clust_risk$plot
+plot(suppl_figures$part_clust_risk)
 
 ```
 
@@ -266,9 +266,9 @@ Participants clusters were defined by non-lung function and non-CT clinical feat
 
 \newpage
 
-```{r fig-mod-cor, fig.width = mm_inch(suppl_figures$mod_cor$w), fig.height = mm_inch(suppl_figures$mod_cor$h), dpi = 600, fig.cap = 'Correlation of the machine learning algorithm prediction accuracy.'}
+```{r fig-mod-cor, fig.width = width(suppl_figures$mod_cor), fig.height = height(suppl_figures$mod_cor), dpi = 600, fig.cap = 'Correlation of the machine learning algorithm prediction accuracy.'}
 
-suppl_figures$mod_cor$plot
+plot(suppl_figures$mod_cor)
 
 ```
 
@@ -279,9 +279,9 @@ Pearson's correlation coefficients of the classifier prediction accuracy in the 
 
 \newpage
 
-```{r fig-mod-ens, fig.width = mm_inch(suppl_figures$ensemble$w), fig.height = mm_inch(suppl_figures$ensemble$h), dpi = 600, fig.cap = 'Machine learning model ensembles.'}
+```{r fig-mod-ens, fig.width = width(suppl_figures$ensemble), fig.height = height(suppl_figures$ensemble), dpi = 600, fig.cap = 'Machine learning model ensembles.'}
 
-suppl_figures$ensemble$plot
+plot(suppl_figures$ensemble)
 
 ```
 
@@ -291,9 +291,9 @@ Single machine learning classifiers (C5.0, RF: random forests, SVM-R: support ve
 
 \newpage
 
-```{r fig-ml-training, fig.width = mm_inch(suppl_figures$ml_train_cohort$w), fig.height = mm_inch(suppl_figures$ml_train_cohort$h), dpi = 600, fig.cap = 'Prediction of persistent radiological lung abnormalities, functional lung impairment and symptoms by machine learning algorithms in the training data sets.'}
+```{r fig-ml-training, fig.width = width(suppl_figures$ml_train_cohort), fig.height = height(suppl_figures$ml_train_cohort), dpi = 600, fig.cap = 'Prediction of persistent radiological lung abnormalities, functional lung impairment and symptoms by machine learning algorithms in the training data sets.'}
 
-suppl_figures$ml_train_cohort$plot
+plot(suppl_figures$ml_train_cohort)
 
 ```
 
@@ -303,9 +303,9 @@ Single machine learning classifiers (C5.0, RF: random forests, SVM-R: support ve
 
 \newpage
 
-```{r fig-importance-any, fig.width = mm_inch(suppl_figures$importance_any_ct$w), fig.height = mm_inch(suppl_figures$importance_any_ct$h), dpi = 600, fig.cap = 'Variable importance statistics for prediction of any lung CT abnormalities at the 180-day follow-up by machine learning classifiers.'}
+```{r fig-importance-any, fig.width = width(suppl_figures$importance_any_ct), fig.height = height(suppl_figures$importance_any_ct), dpi = 600, fig.cap = 'Variable importance statistics for prediction of any lung CT abnormalities at the 180-day follow-up by machine learning classifiers.'}
 
-suppl_figures$importance_any_ct$plot
+plot(suppl_figures$importance_any_ct)
 
 ```
 
@@ -317,9 +317,9 @@ CKD: chronic kidney disease, Q1, Q4: 1^st^, 4^th^ quartile, PD: pulmonary diseas
 
 \newpage
 
-```{r fig-importance-severe, fig.width = mm_inch(suppl_figures$importance_ct_severe$w), fig.height = mm_inch(suppl_figures$importance_ct_severe$h), dpi = 600, fig.cap = 'Variable importance statistics for prediction of moderate-to-severe lung CT abnormalities at the 180-day follow-up by machine learning classifiers.'}
+```{r fig-importance-severe, fig.width = width(suppl_figures$importance_ct_severe), fig.height = height(suppl_figures$importance_ct_severe), dpi = 600, fig.cap = 'Variable importance statistics for prediction of moderate-to-severe lung CT abnormalities at the 180-day follow-up by machine learning classifiers.'}
 
-suppl_figures$importance_ct_severe$plot
+plot(suppl_figures$importance_ct_severe)
 
 ```
 
@@ -331,9 +331,9 @@ PD: pulmonary disease, GITD: gastrointestinal disease, Q1, Q2, Q4: 1^st^, 2^nd^,
 
 \newpage
 
-```{r fig-importance-lufo, fig.width = mm_inch(suppl_figures$importance_lufo$w), fig.height = mm_inch(suppl_figures$importance_lufo$h), dpi = 600, fig.cap = 'Variable importance statistics for prediction of functional lung impairment at the 180-day follow-up by machine learning classifiers.'}
+```{r fig-importance-lufo, fig.width = width(suppl_figures$importance_lufo), fig.height = height(suppl_figures$importance_lufo), dpi = 600, fig.cap = 'Variable importance statistics for prediction of functional lung impairment at the 180-day follow-up by machine learning classifiers.'}
 
-suppl_figures$importance_lufo$plot
+plot(suppl_figures$importance_lufo)
 
 ```
 
@@ -345,9 +345,9 @@ CKD: chronic kidney disease, Q1, Q2: 1^st^. 2^nd^ quartile, V0: acute COVID-19, 
 
 \newpage
 
-```{r fig-importance-sympt, fig.width = mm_inch(suppl_figures$importance_symptoms$w), fig.height = mm_inch(suppl_figures$importance_symptoms$h), dpi = 600, fig.cap = 'Variable importance statistics for prediction of persistent symptoms at the 180-day follow-up by machine learning classifiers.'}
+```{r fig-importance-sympt, fig.width = width(suppl_figures$importance_symptoms), fig.height = height(suppl_figures$importance_symptoms), dpi = 600, fig.cap = 'Variable importance statistics for prediction of persistent symptoms at the 180-day follow-up by machine learning classifiers.'}
 
-suppl_figures$importance_symptoms$plot
+plot(suppl_figures$importance_symptoms)
 
 ```
 

@@ -13,9 +13,9 @@
   
   paper_figures$analysis_scheme <- plot_grid(ggdraw() + 
                                                draw_image('./analysis scheme/Analysis_scheme.png')) %>% 
-    as_figure_object(figure_label = 'figure_1_analysis_scheme', 
-                     w = 180, 
-                     h = 160)
+    as_figure(label = 'figure_1_analysis_scheme', 
+              w = 180, 
+              h = 160)
   
 # Figure 2: symptom recovery -----
   
@@ -41,18 +41,18 @@
                                             rel_heights = c(0.51, 0.49), 
                                             labels = LETTERS, 
                                             label_size = 10) %>% 
-    as_figure_object(figure_label = 'figure_2_symptom_recovery', 
-                     w = 180, 
-                     h = 145)
-  
+    as_figure(label = 'figure_2_symptom_recovery', 
+              w = 180, 
+              h = 145)
+
 # Figure 3: pulmonary recovery ------
   
   insert_msg('Figure 3: pulmonary recovery')
   
   paper_figures$pulmo_recovery <- plot_grid(cov_lung$kinetics$plot) %>% 
-    as_figure_object(figure_label = 'figure_3_pulmo_recovery', 
-                     w = 180, 
-                     h = 140)
+    as_figure(label = 'figure_3_pulmo_recovery', 
+              w = 180, 
+              h = 140)
   
 # Figure 4: univariate modeling, CT responses -----
   
@@ -67,9 +67,9 @@
               rel_heights = c(1.1, 0.9), 
               labels = LETTERS,
               label_size = 10) %>%
-    as_figure_object(figure_label = 'figure_4_univariate_ct', 
-                     w = 180, 
-                     h = 210)
+    as_figure(label = 'figure_4_univariate_ct', 
+              w = 180, 
+              h = 210)
   
 # Figure 5: univariate modeling, lung function recovery ------
   
@@ -77,9 +77,9 @@
   
   paper_figures$uni_mod_lufo <- plot_grid(cov_univariate$forest_plots$lung_function_impaired_V3 + 
                                             theme(legend.position = 'none')) %>% 
-    as_figure_object(figure_label = 'figure_5_univariate_lufo', 
-                     w = 180, 
-                     h = 110)
+    as_figure(label = 'figure_5_univariate_lufo', 
+              w = 180, 
+              h = 110)
   
 # Figure 6: feature clustering -----
   
@@ -119,9 +119,9 @@
                                            rel_heights = c(0.4, 0.6), 
                                            labels = LETTERS, 
                                            label_size = 10) %>% 
-    as_figure_object(figure_label = 'figure_6_feature_clustering', 
-                     w = 180, 
-                     h = 220)
+    as_figure(label = 'figure_6_feature_clustering', 
+              w = 180, 
+              h = 220)
   
 # Figure 7: participant clustering -----
   
@@ -153,9 +153,9 @@
                                             rel_heights = c(0.3, 0.7), 
                                             labels = LETTERS, 
                                             label_size = 10) %>% 
-    as_figure_object(figure_label = 'figure_7_som_clustering', 
-                     w = 180, 
-                     h = 200)
+    as_figure(label = 'figure_7_som_clustering', 
+              w = 180, 
+              h = 200)
   
 # Figure 8: outcome in the participant clusters -----
   
@@ -193,11 +193,10 @@
                                           rel_heights = c(0.4, 0.6), 
                                           labels = LETTERS, 
                                           label_size = 10) %>% 
-    as_figure_object(figure_label = 'figure_8_som_outcome', 
-                     w = 180, 
-                     h = 220)
-  
-#   
+    as_figure(label = 'figure_8_som_outcome', 
+              w = 180, 
+              h = 220)
+   
 # Figure 9: machine learning, comparison of the algorithms -----
   
   insert_msg('Figure 9: machine learning')
@@ -215,9 +214,9 @@
     plot_grid(get_legend(ml_plots$roc_stats$cv[[1]]), 
               ncol = 2, 
               rel_widths = c(0.9, 0.1)) %>% 
-    as_figure_object(figure_label = 'figure_9_machine_learning', 
-                     w = 180, 
-                     h = 140)
+    as_figure(label = 'figure_9_machine_learning', 
+              w = 180, 
+              h = 140)
   
 # Figure 10: machine learning, ensemble in the severity groups ----
   
@@ -236,39 +235,39 @@
                            theme(legend.position = 'bottom')), 
               nrow = 2, 
               rel_heights = c(0.9, 0.1)) %>% 
-    as_figure_object(figure_label = 'figure_10_ml_severity', 
-                     w = 180, 
-                     h = 180)
+    as_figure(label = 'figure_10_ml_severity', 
+              w = 180, 
+              h = 180)
   
-# Supplementary Figure S1: overlap between the outcome variables -------
+# Supplementary Figure 3 - supplement 1: overlap between the outcome variables -------
   
-  insert_msg('Figure S1: overlap between the variables, any CT abnormalities')
+  insert_msg('Figure 3 - supplement 1: overlap between the variables, any CT abnormalities')
   
   suppl_figures$outcome_overlap_anyCT <- overlap$venn$CT_findings %>% 
     plot_grid(plotlist = ., 
               align = 'hv', 
               ncol = 2,  
               label_size = 10) %>% 
-    as_figure_object(figure_label = 'figure3_supplement1', 
-                     w = 180, 
-                     h = 190)
+    as_figure(label = 'figure3_supplement1', 
+              w = 180, 
+              h = 190)
   
-# Supplementary Figure S2: overlap between the outcome variables -------
+# Supplementary Figure 3 - supplement 2: overlap between the outcome variables -------
   
-  insert_msg('Figure S2: overlap between the variables, moderate - severe abnormalities')
+  insert_msg('Figure 3 - supplement 2: overlap between the variables, moderate - severe abnormalities')
   
   suppl_figures$outcome_overlap_sev <- overlap$venn$CTsevabove5 %>% 
     plot_grid(plotlist = ., 
               align = 'hv', 
               ncol = 2,  
               label_size = 10) %>% 
-    as_figure_object(figure_label = 'figure3_supplement2', 
-                     w = 180, 
-                     h = 190)
+    as_figure(label = 'figure3_supplement2', 
+              w = 180, 
+              h = 190)
   
-# Supplementary Figure S3: outcome kappa -----
+# Supplementary Figure 3 - supplement 3: outcome kappa -----
   
-  insert_msg('Figure S3: outcome kappa')
+  insert_msg('Figure 3 - supplement 3: outcome kappa')
   
   suppl_figures$outcome_kappa <- cov_lung$distribution$plots %>% 
     map(~.x + theme(legend.position = 'none')) %>% 
@@ -284,13 +283,13 @@
               rel_heights = c(1, 2), 
               labels = LETTERS, 
               label_size = 10) %>% 
-    as_figure_object(figure_label = 'figure3_supplement3', 
-                     w = 180, 
-                     h = 220)
+    as_figure(label = 'figure3_supplement3', 
+              w = 180, 
+              h = 220)
   
-# Supplementary Figure S4: feature clustering QC -----
+# Supplementary Figure 6 - supplement 1: feature clustering QC -----
   
-  insert_msg('Figure S4: feature clustering QC')
+  insert_msg('Figure 6 - supplement 1: feature clustering QC')
   
   suppl_figures$ft_clust_qc <- plot_grid(ft_clust$algo_perf$variance_plot, 
                                          ft_clust$algo_perf$cv_plot, 
@@ -303,13 +302,13 @@
                                          align = 'h', 
                                          labels = LETTERS, 
                                          label_size = 10) %>% 
-    as_figure_object(figure_label = 'figure6_supplement1', 
-                     w = 180, 
-                     h = 160)
+    as_figure(label = 'figure6_supplement1', 
+              w = 180, 
+              h = 160)
   
-# Supplementary Figure S5: heat map of the clusters  -----
+# Supplementary Figure 6 - supplement 2: heat map of the clusters  -----
   
-  insert_msg('Figure S5: heat map of the feature clusters')
+  insert_msg('Figure 6 - supplement 2: heat map of the feature clusters')
   
   suppl_figures$ft_heat_map <- plot_grid(ft_clust$test_clust$heat_map + 
                                            labs(tag = paste0(stri_replace_all(ft_clust$test_clust$n_tag, fixed = '\n', replacement = ', '), 
@@ -317,13 +316,13 @@
                                                              nobs(ft_clust$test_clust$clust_obj)$variables)) + 
                                            theme(plot.subtitle = element_blank(), 
                                                  legend.position = 'bottom')) %>% 
-    as_figure_object(figure_label = 'figure6_supplement2', 
-                     w = 180, 
-                     h = 240)
+    as_figure(label = 'figure6_supplement2', 
+              w = 180, 
+              h = 240)
   
-# Supplementary Figure S6: participant clustering QC -----
+# Supplementary Figure 7 - supplement 1: participant clustering QC -----
   
-  insert_msg('Figure S6: participant clustering QC')
+  insert_msg('Figure 7 - supplement 1: participant clustering QC')
   
   suppl_figures$part_clust_qc <- plot_grid(part_clust$algo_perf$variance_plot, 
                                            part_clust$algo_perf$cv_plot, 
@@ -353,23 +352,23 @@
                         label_size = 10), 
               nrow = 2, 
               rel_heights = c(1, 2)) %>% 
-    as_figure_object(figure_label = 'figure7_supplement1', 
-                     w = 180, 
-                     h = 210)
+    as_figure(label = 'figure7_supplement1', 
+              w = 180, 
+              h = 210)
   
-# Supplementary Figure S7: the most important clustering factors -----
+# Supplementary Figure 7 - supplement 2: the most important clustering factors -----
   
-  insert_msg('Figure S7: the most important clustering factors')
+  insert_msg('Figure 7 - supplement 2: the most important clustering factors')
   
   suppl_figures$part_clust_fct <- plot_grid(part_clust$fct_impact$plot + 
                                               expand_limits(x = 0.085)) %>% 
-    as_figure_object(figure_label = 'figure7_supplement2', 
-                     w = 180, 
-                     h = 180)
+    as_figure(label = 'figure7_supplement2', 
+              w = 180, 
+              h = 180)
   
-# Supplementary Figure S8: prediction of CT abnormalities by the cluster assignment -----
+# Supplementary Figure 8 - supplement 1: prediction of CT abnormalities by the cluster assignment -----
   
-  insert_msg('Figure S8: prediction of CT abnormalities by the clusters')
+  insert_msg('Figure 8 - supplement 1: prediction of CT abnormalities by the clusters')
   
   suppl_figures$part_clust_risk <- plot_grid(plot_grid(clust_outcome$main_plots$pat_group, 
                                                        ggdraw(), 
@@ -381,39 +380,39 @@
                                              rel_heights = c(0.45, 0.55), 
                                              labels = LETTERS, 
                                              label_size = 10) %>% 
-    as_figure_object(figure_label = 'figure8_supplement1', 
-                     w = 180, 
-                     h = 190)
+    as_figure(label = 'figure8_supplement1', 
+              w = 180, 
+              h = 190)
   
-# Supplementary Figure S9: classifier correlations ------
+# Supplementary Figure 9 - supplement 1: classifier correlations ------
   
-  insert_msg('Supplementary Figure S9: classifier correlations')
+  insert_msg('Figure 9 - supplement 1: classifier correlations')
   
   suppl_figures$mod_cor <- ml_plots$correlation %>% 
     map(~.x + theme(legend.position = 'none')) %>% 
     plot_grid(plotlist = ., 
               ncol = 2, 
               align = 'hv') %>% 
-    as_figure_object(figure_label = 'figure9_supplement1', 
-                     w = 180, 
-                     h = 180)
+    as_figure(label = 'figure9_supplement1', 
+              w = 180, 
+              h = 180)
   
-# Supplementary Figure S10: ensemble construction ------
+# Supplementary Figure 9 - supplement 2: ensemble construction ------
   
-  insert_msg('Supplementary Figure S10: ensemble development')
+  insert_msg('Figure 9 - supplement 2: ensemble development')
   
   suppl_figures$ensemble <- ml_plots$ensemble %>% 
     map(~.x + theme(legend.position = 'none')) %>% 
     plot_grid(plotlist = ., 
               ncol = 2, 
               align = 'hv') %>% 
-    as_figure_object(figure_label = 'figure9_supplement2', 
-                     w = 180, 
-                     h = 180)
+    as_figure(label = 'figure9_supplement2', 
+              w = 180, 
+              h = 180)
   
-# Supplementary Figure S11: Testing of ML algorithms, training ------
+# Supplementary Figure 9 - supplement 3: Testing of ML algorithms, training ------
   
-  insert_msg('Figure S11: ML classifiers in the training cohort')
+  insert_msg('Figure 9 - supplement 3: ML classifiers in the training cohort')
 
   suppl_figures$ml_train_cohort <- ml_plots$roc_stats$train[c('CT_findings_V3', 
                                                               'CTsevabove5_V3', 
@@ -428,13 +427,13 @@
     plot_grid(get_legend(ml_plots$roc_stats$train[[1]]), 
               ncol = 2, 
               rel_widths = c(0.9, 0.1)) %>%
-    as_figure_object(figure_label = 'figure9_supplement3', 
-                     w = 180, 
-                     h = 140)
+    as_figure(label = 'figure9_supplement3', 
+              w = 180, 
+              h = 140)
   
-# Supplementary Figure S12 - S15: Variable importance ------
+# Supplementary Figure 9 - supplements 4 to 7: Variable importance ------
   
-  insert_msg('Figure S12 - S15: Variable importance')
+  insert_msg('Figure 9 - supplements 4 to 7: Variable importance')
   
   suppl_figures$importance_any_ct <- ml_plots[c('c50_importance_plots', 
                                                 'rf_importance_plots', 
@@ -483,7 +482,7 @@
               'figure9_supplement5', 
               'figure9_supplement6', 
               'figure9_supplement7'), 
-         as_figure_object, 
+         as_figure, 
          w = 180, 
          h = 180)
   
@@ -491,13 +490,19 @@
   
   insert_msg('Saving the figures')
   
+  paper_figures <- paper_figures %>%
+    map(convert, to = 'in')
+  
+  suppl_figures <- suppl_figures %>% 
+    map(convert, to = 'in')
+  
   paper_figures %>% 
-    walk(save_figure_object, 
-         target_folder = './paper/figures')
+    walk(save_figure, 
+         path = './paper/figures')
   
   suppl_figures %>% 
-    walk(save_figure_object, 
-         target_folder = './paper/supplementary figures')
+    walk(save_figure, 
+         path = './paper/supplementary figures')
 
 # END ----
   

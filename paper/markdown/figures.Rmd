@@ -41,9 +41,9 @@ knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 
 # Figures {#sec:figures}
 
-```{r fig-analysis-scheme, fig.width = mm_inch(paper_figures$analysis_scheme$w), fig.height = mm_inch(paper_figures$analysis_scheme$h), dpi = 600, fig.cap = 'Study inclusion flow diagram and analysis scheme.'}
+```{r fig-analysis-scheme, fig.width = width(paper_figures$analysis_scheme), fig.height = height(paper_figures$analysis_scheme), dpi = 600, fig.cap = 'Study inclusion flow diagram and analysis scheme.'}
 
-paper_figures$analysis_scheme$plot
+plot(paper_figures$analysis_scheme)
 
 ```
 
@@ -51,9 +51,9 @@ __Figure \@ref(fig:fig-analysis-scheme). Study inclusion flow diagram and analys
 
 \newpage
 
-```{r fig-sympt-recovery, fig.width = mm_inch(paper_figures$sympt_recovery$w), fig.height = mm_inch(paper_figures$sympt_recovery$h), dpi = 600, fig.cap = 'Kinetic of recovery from COVID-19 symptoms.'}
+```{r fig-sympt-recovery, fig.width = width(paper_figures$sympt_recovery), fig.height = height(paper_figures$sympt_recovery), dpi = 600, fig.cap = 'Kinetic of recovery from COVID-19 symptoms.'}
 
-paper_figures$sympt_recovery$plot
+plot(paper_figures$sympt_recovery)
 
 ```
 
@@ -65,9 +65,9 @@ imp.: impaired.
 
 \newpage
 
-```{r fig-pulmo-recovery, fig.width = mm_inch(paper_figures$pulmo_recovery$w), fig.height = mm_inch(paper_figures$pulmo_recovery$h), dpi = 600, fig.cap = 'Kinetic of pulmonary recovery.'}
+```{r fig-pulmo-recovery, fig.width = width(paper_figures$pulmo_recovery), fig.height = height(paper_figures$pulmo_recovery), dpi = 600, fig.cap = 'Kinetic of pulmonary recovery.'}
 
-paper_figures$pulmo_recovery$plot
+plot(paper_figures$pulmo_recovery)
 
 ```
 
@@ -77,9 +77,9 @@ Recovery from any lung CT abnormalities, moderate-to-severe lung CT abnormalitie
 
 \newpage
 
-```{r fig-model-ct, fig.width = mm_inch(paper_figures$uni_mod_ct$w), fig.height = mm_inch(paper_figures$uni_mod_ct$h), dpi = 600, fig.cap = 'Risk factors of developing persistent radiological lung abnormalities.'}
+```{r fig-model-ct, fig.width = width(paper_figures$uni_mod_ct), fig.height = height(paper_figures$uni_mod_ct), dpi = 600, fig.cap = 'Risk factors of developing persistent radiological lung abnormalities.'}
 
-paper_figures$uni_mod_ct$plot
+plot(paper_figures$uni_mod_ct)
 
 ```
 
@@ -91,9 +91,9 @@ Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quartile, ICU: intensive care unit
 
 \newpage
 
-```{r fig-model-lufo, fig.width = mm_inch(paper_figures$uni_mod_lufo$w), fig.height = mm_inch(paper_figures$uni_mod_lufo$h), dpi = 600, fig.cap = 'Risk factors of developing persistent functional lung impairment.'}
+```{r fig-model-lufo, fig.width = width(paper_figures$uni_mod_lufo), fig.height = height(paper_figures$uni_mod_lufo), dpi = 600, fig.cap = 'Risk factors of developing persistent functional lung impairment.'}
 
-paper_figures$uni_mod_lufo$plot
+plot(paper_figures$uni_mod_lufo)
 
 ```
 
@@ -105,9 +105,9 @@ Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quartile.
 
 \newpage
 
-```{r fig-ft-clustering, fig.width = mm_inch(paper_figures$ft_clustering$w), fig.height = mm_inch(paper_figures$ft_clustering$h), dpi = 600, fig.cap = 'Association of incomplete symptom, lung function and radiological lung recovery with demographic and clinical parameters of acute COVID-19 and early recovery.'}
+```{r fig-ft-clustering, fig.width = width(paper_figures$ft_clustering), fig.height = height(paper_figures$ft_clustering), dpi = 600, fig.cap = 'Association of incomplete symptom, lung function and radiological lung recovery with demographic and clinical parameters of acute COVID-19 and early recovery.'}
 
-paper_figures$ft_clustering$plot
+plot(paper_figures$ft_clustering)
 
 ```
 
@@ -123,9 +123,9 @@ Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quartile, GITD: gastrointestinal d
 
 \newpage
 
-```{r fig-part-clustering, fig.width = mm_inch(paper_figures$som_clustering$w), fig.height = mm_inch(paper_figures$som_clustering$h), dpi = 600, fig.cap = 'Clustering of the study participants by non-lung function and non-CT clinical features.'}
+```{r fig-part-clustering, fig.width = width(paper_figures$som_clustering), fig.height = height(paper_figures$som_clustering), dpi = 600, fig.cap = 'Clustering of the study participants by non-lung function and non-CT clinical features.'}
 
-paper_figures$som_clustering$plot
+plot(paper_figures$som_clustering)
 
 ```
 
@@ -141,9 +141,9 @@ Q1, Q2, Q3, Q4: 1^st^, 2^nd^, 3^rd^ and 4^th^ quartile, GITD: gastrointestinal d
 
 \newpage
 
-```{r fig-clust-outcome, fig.width = mm_inch(paper_figures$som_outcomes$w), fig.height = mm_inch(paper_figures$som_outcomes$h), dpi = 600, fig.cap = 'Frequency of persistent radiological lung abnormalities, functional lung impairment and symptoms in the participant clusters.'}
+```{r fig-clust-outcome, fig.width = width(paper_figures$som_outcomes), fig.height = height(paper_figures$som_outcomes), dpi = 600, fig.cap = 'Frequency of persistent radiological lung abnormalities, functional lung impairment and symptoms in the participant clusters.'}
 
-paper_figures$som_outcomes$plot
+plot(paper_figures$som_outcomes)
 
 ```
 
@@ -157,9 +157,9 @@ __(B)__ Frequencies of the particular symptoms in the participant clusters.
 
 \newpage
 
-```{r fig-ml, fig.width = mm_inch(paper_figures$ml$w), fig.height = mm_inch(paper_figures$ml$h), dpi = 600, fig.cap = 'Prediction of persistent radiological lung abnormalities, functional lung impairment and symptoms by machine learning algorithms.'}
+```{r fig-ml, fig.width = width(paper_figures$ml), fig.height = height(paper_figures$ml), dpi = 600, fig.cap = 'Prediction of persistent radiological lung abnormalities, functional lung impairment and symptoms by machine learning algorithms.'}
 
-paper_figures$ml$plot
+plot(paper_figures$ml)
 
 ```
 
@@ -169,9 +169,9 @@ Single machine learning classifiers (C5.0, RF: random forests, SVM-R: support ve
 
 \newpage
 
-```{r fig-ml-severity, fig.width = mm_inch(paper_figures$ml_severity$w), fig.height = mm_inch(paper_figures$ml_severity$h), dpi = 600, fig.cap = 'Performance of the machine learning ensemble classifier in mild-to-moderate and severe-to-critical COVID-19 convalescents.'}
+```{r fig-ml-severity, fig.width = width(paper_figures$ml_severity), fig.height = height(paper_figures$ml_severity), dpi = 600, fig.cap = 'Performance of the machine learning ensemble classifier in mild-to-moderate and severe-to-critical COVID-19 convalescents.'}
 
-paper_figures$ml_severity$plot
+plot(paper_figures$ml_severity)
 
 ```
 

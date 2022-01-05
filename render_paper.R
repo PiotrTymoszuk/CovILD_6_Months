@@ -5,11 +5,11 @@
 # tools ----
   
   c('./tools/sys_tools.R', 
-    './tools/project_tools.R', 
-    './tools/plotting_tools.R') %>% 
+    './tools/project_tools.R') %>% 
     walk(source)
   
   library(writexl)
+  library(figur) ## available at https://github.com/PiotrTymoszuk/figur
   
 # paper scripts -----
   
