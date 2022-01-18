@@ -3,9 +3,12 @@
 
 # toolbox ----
 
-  source('./tools/sys_tools.R')
   source('./tools/project_tools.R')
 
+  library(plyr)
+  library(tidyverse)
+  library(stringi)
+  library(soucer) ## available at https://github.com/PiotrTymoszuk/soucer
   library(readxl)
 
   insert_head()
