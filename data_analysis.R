@@ -2,13 +2,12 @@
 
 # tools -----
 
-  c('./tools/sys_tools.R', 
-    './tools/project_tools.R', 
+  c('./tools/project_tools.R', 
     './tools/counting_tools.R', 
     './tools/modeling_tools.R',
-    './tools/clust_tools2.R', 
-    './tools/lm_qc_tools.R') %>% 
-  walk(source)
+    './tools/clust_tools2.R') %>% 
+  source_all(message = FALSE, 
+             crash = TRUE)
 
   library(furrr)
   library(doParallel)
@@ -20,6 +19,7 @@
   library(rpart)
   library(caretEnsemble)
   library(plotROC)
+  library(lmqc) ## available from https://github.com/PiotrTymoszuk/lmqc
 
   select <- dplyr::select
 
@@ -37,4 +37,4 @@
     './analysis scripts/machine_learning.R', ## machine learning classifiers developed with Caret and caretEnsemble
     './analysis scripts/ml_plots.R', ## Visualization of the model stats
     './analysis scripts/ml_detail.R') %>%  ## ROC analysis in the cohort subsets
-  walk(source)
+  source_all(message = TRUE, crash = TRUE)

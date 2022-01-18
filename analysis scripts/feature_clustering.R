@@ -23,7 +23,7 @@
   ft_clust$ft_labels <- stri_replace(c(globals$mod_var_labels, globals$resp_labels), 
                                      fixed = '\n', 
                                      replacement = ' ') %>% 
-    stri_replace(fixed = 'impairment', replacement = 'imp.') %>% 
+    #stri_replace(fixed = 'impairment', replacement = 'imp.') %>% 
     set_names(names(c(globals$mod_var_labels, globals$resp_labels)))
   
 # analysis and distance calculation table ----

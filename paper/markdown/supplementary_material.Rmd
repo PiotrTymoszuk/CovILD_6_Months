@@ -162,7 +162,7 @@ plot(suppl_figures$outcome_overlap_anyCT)
 
 __Supplementary Figure \@ref(fig:fig-overlap-any-CT). Co-occurrence of any lung CT abnormalities, functional lung impairment and persistent symptoms.__
 
-Numbers and percentages of the study participants with persistent symptoms, functional lung impairment or any lung CT abnormalities at the consecutive follow-up visits presented in Venn diagrams. Numbers of complete observations are shown under the plots.
+Numbers and percentages of the study participants with persistent symptoms, functional lung impairment or any lung CT abnormalities at the consecutive follow-up visits presented in quasi-proportional Venn diagrams. Numbers of complete observations are shown under the plots.
 
 \newpage
 
@@ -174,7 +174,7 @@ plot(suppl_figures$outcome_overlap_sev)
 
 __Supplementary Figure \@ref(fig:fig-overlap-sev-CT). Co-occurrence of moderate-to-severe lung CT abnormalities, functional lung impairment and persistent symptoms.__
 
-Numbers and percentages of the study participants with persistent symptoms, functional lung impairment or moderate-to-severe lung CT abnormalities (severity score > 5) at the consecutive follow-up visits presented in Venn diagrams. Numbers of complete observations are shown under the plots.
+Numbers and percentages of the study participants with persistent symptoms, functional lung impairment or moderate-to-severe lung CT abnormalities (severity score > 5) at the consecutive follow-up visits presented in quasi-proportional Venn diagrams. Numbers of complete observations are shown under the plots.
 
 
 \newpage

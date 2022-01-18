@@ -92,9 +92,9 @@
                                                                               'lung_function_impaired_V3', 
                                                                               'CT_findings_rec', 
                                                                               'pat_group')], 
-                                   label = c(clust_outcome$ft_labels[c('sympt_present_V3', 
-                                                                       'lung_function_impaired_V3')], 
-                                             'CT abnormalities @V3', 
+                                   label = c('Symptoms\nat 180-day visit',
+                                             'Lung function imp.\nat 180-day visit', 
+                                             'CT abnormalities\nat 180-day visit', 
                                              'Acute COVID-19 severity'), 
                                    fill_colors = list(c('steelblue', 'coral3'), 
                                                       c('steelblue', 'coral3'), 
@@ -149,7 +149,7 @@
     scale_y_discrete(labels = clust_outcome$ft_labels) + 
     globals$common_theme + 
     theme(axis.title.y = element_blank()) + 
-    labs(title = 'Symtoms present @V3', 
+    labs(title = 'Symtoms present at 180-day visit', 
          tag = clust_outcome$main_plots$sympt_present_V3$labels$tag, 
          x = '% cluster')
   
@@ -185,7 +185,7 @@
   ## inference summary
   
   clust_outcome$ct_risk$test_summary <- clust_outcome$ct_risk$models %>% 
-    map(get_estimates, transf_fun = exp) %>% 
+    map(lmqc::get_estimates, transf_fun = exp) %>% 
     map2_dfr(., names(.), ~mutate(.x, model_type = .y)) %>% 
     filter(parameter != '(Intercept)') %>% 
     mutate(p_adj = p.adjust(p_value, 'BH'), 
@@ -207,9 +207,9 @@
     map2(., names(.), ~mutate(.x, response = .y)) %>% 
     map_dfr(~.x[2, c('response', 'n')])
   
-  clust_outcome$ct_risk$outcome_tag <- paste0('CT abnormalities @V3: n = ', clust_outcome$ct_risk$outcome_n$n[1], 
-                                              ', CT Severity Score @V3 > 5: n = ', clust_outcome$ct_risk$outcome_n$n[2], 
-                                              ', Lung function impaired @V3: n = ', clust_outcome$ct_risk$outcome_n$n[2])
+  clust_outcome$ct_risk$outcome_tag <- paste0('CT abnormalities: n = ', clust_outcome$ct_risk$outcome_n$n[1], 
+                                              ', CT Severity Score > 5: n = ', clust_outcome$ct_risk$outcome_n$n[2], 
+                                              ', Lung function impaired: n = ', clust_outcome$ct_risk$outcome_n$n[2])
   
   clust_outcome$ct_risk$pat_group_n <- count(model.frame(clust_outcome$ct_risk$models$adj_severe), pat_group)
   

@@ -36,7 +36,7 @@
     pmap_dfr(get_feature_summary) %>% 
     map_dfc(stri_replace, regex = '^.*\n1:\\s{1}', replacement = '') %>% 
     select(label, `2`, `3`, `6`) %>% 
-    set_names(c('Outcome', '60-day FUP', '100-day FUP', '180-day FUP'))
+    set_names(c('Outcome', '2-month FUP', '3-month FUP', '6-month FUP'))
   
 # END -----
   

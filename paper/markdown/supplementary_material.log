@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.13)  4 JAN 2022 16:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.11.13)  18 JAN 2022 21:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_mate
-rial.tex"
+**"C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material
+.tex"
 
-(c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al.tex
+(c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material.t
+ex
 LaTeX2e <2021-11-15>
 L3 programming layer <2021-11-12> (c:/Users/piotr/AppData/Roaming/TinyTeX/texmf
 -dist/tex/latex/base/article.cls
@@ -1131,200 +1131,192 @@ Overfull \hbox (31.88129pt too wide) in alignment at lines 245--293
  []
 
 [5]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-overlap-any-CT-1.pdf, id=49, 511.9125pt x 540.0175pt>
-
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-overlap-any-CT-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-overlap-any-CT-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-overlap-any-CT-1.pdf  used on
- input line 331.
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-overlap-any-CT-1.pdf, id=49, 511.9125pt x 540.0175pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-overlap-any-CT-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-overlap-any-CT-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-overlap-any-CT-1.pdf  used on inp
+ut line 331.
 (pdftex.def)             Requested size: 469.75449pt x 495.54492pt.
-[6] [7 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary
-_material_files/figure-latex/fig-overlap-any-CT-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-overlap-sev-CT-1.pdf, id=73, 511.9125pt x 540.0175pt>
-
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-overlap-sev-CT-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-overlap-sev-CT-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-overlap-sev-CT-1.pdf  used on
- input line 343.
+[6] [7 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mat
+erial_files/figure-latex/fig-overlap-any-CT-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-overlap-sev-CT-1.pdf, id=75, 511.9125pt x 540.0175pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-overlap-sev-CT-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-overlap-sev-CT-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-overlap-sev-CT-1.pdf  used on inp
+ut line 343.
 (pdftex.def)             Requested size: 469.75449pt x 495.54492pt.
-[8 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_mat
-erial_files/figure-latex/fig-overlap-sev-CT-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-outcome-kappa-1.pdf, id=89, 511.9125pt x 625.33624pt>
-
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-outcome-kappa-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-outcome-kappa-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-outcome-kappa-1.pdf  used on 
-input line 355.
+[8 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materia
+l_files/figure-latex/fig-overlap-sev-CT-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-outcome-kappa-1.pdf, id=93, 511.9125pt x 625.33624pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-outcome-kappa-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-outcome-kappa-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-outcome-kappa-1.pdf  used on inpu
+t line 355.
 (pdftex.def)             Requested size: 469.75449pt x 573.83734pt.
-[9 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_mat
-erial_files/figure-latex/fig-outcome-kappa-1.pdf>] [10]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-ft-clust-qc-1.pdf, id=110, 511.9125pt x 454.69875pt>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-ft-clust-qc-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-ft-clust-qc-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-ft-clust-qc-1.pdf  used on in
-put line 370.
+[9 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materia
+l_files/figure-latex/fig-outcome-kappa-1.pdf>] [10]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-ft-clust-qc-1.pdf, id=114, 511.9125pt x 454.69875pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-ft-clust-qc-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-ft-clust-qc-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-ft-clust-qc-1.pdf  used on input 
+line 370.
 (pdftex.def)             Requested size: 469.75449pt x 417.2525pt.
-[11 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-ft-clust-qc-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-ft-heat-1.pdf, id=124, 511.9125pt x 682.55pt>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-ft-heat-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-ft-heat-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-ft-heat-1.pdf  used on input 
-line 386.
+[11 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-ft-clust-qc-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-ft-heat-1.pdf, id=128, 511.9125pt x 682.55pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-ft-heat-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-ft-heat-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-ft-heat-1.pdf  used on input line
+ 386.
 (pdftex.def)             Requested size: 469.75449pt x 626.33932pt.
 
 Overfull \vbox (21.90932pt too high) has occurred while \output is active []
 
-[12 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-ft-heat-1.pdf>] [13]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-part-clust-qc-1.pdf, id=148, 511.9125pt x 597.23125pt
->
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-part-clust-qc-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-part-clust-qc-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-part-clust-qc-1.pdf  used on 
-input line 401.
+[12 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-ft-heat-1.pdf>] [13]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-part-clust-qc-1.pdf, id=152, 511.9125pt x 597.23125pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-part-clust-qc-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-part-clust-qc-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-part-clust-qc-1.pdf  used on inpu
+t line 401.
 (pdftex.def)             Requested size: 469.75449pt x 548.04689pt.
-[14 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-part-clust-qc-1.pdf>] [15]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-part-clust-impact-1.pdf, id=169, 511.9125pt x 511.912
-5pt>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-part-clust-impact-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-part-clust-impact-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-part-clust-impact-1.pdf  used
- on input line 417.
+[14 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-part-clust-qc-1.pdf>] [15]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-part-clust-impact-1.pdf, id=173, 511.9125pt x 511.9125pt>
+
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-part-clust-impact-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-part-clust-impact-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-part-clust-impact-1.pdf  used on 
+input line 417.
 (pdftex.def)             Requested size: 469.75449pt x 469.75449pt.
-[16 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-part-clust-impact-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-part-clust-risk-1.pdf, id=184, 511.9125pt x 540.0175p
-t>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-part-clust-risk-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-part-clust-risk-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-part-clust-risk-1.pdf  used o
-n input line 431.
+[16 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-part-clust-impact-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-part-clust-risk-1.pdf, id=188, 511.9125pt x 540.0175pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-part-clust-risk-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-part-clust-risk-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-part-clust-risk-1.pdf  used on in
+put line 431.
 (pdftex.def)             Requested size: 469.75449pt x 495.54492pt.
-[17 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-part-clust-risk-1.pdf>] [18]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-mod-cor-1.pdf, id=203, 511.9125pt x 511.9125pt>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-mod-cor-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-mod-cor-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-mod-cor-1.pdf  used on input 
-line 444.
+[17 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-part-clust-risk-1.pdf>] [18]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-mod-cor-1.pdf, id=207, 511.9125pt x 511.9125pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-mod-cor-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-mod-cor-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-mod-cor-1.pdf  used on input line
+ 444.
 (pdftex.def)             Requested size: 469.75449pt x 469.75449pt.
-[19 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-mod-cor-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-mod-ens-1.pdf, id=219, 511.9125pt x 511.9125pt>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-mod-ens-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-mod-ens-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-mod-ens-1.pdf  used on input 
-line 457.
+[19 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-mod-cor-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-mod-ens-1.pdf, id=223, 511.9125pt x 511.9125pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-mod-ens-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-mod-ens-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-mod-ens-1.pdf  used on input line
+ 457.
 (pdftex.def)             Requested size: 469.75449pt x 469.75449pt.
-[20 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-mod-ens-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-ml-training-1.pdf, id=235, 511.9125pt x 397.485pt>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-ml-training-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-ml-training-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-ml-training-1.pdf  used on in
-put line 469.
+[20 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-mod-ens-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-ml-training-1.pdf, id=239, 511.9125pt x 397.485pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-ml-training-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-ml-training-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-ml-training-1.pdf  used on input 
+line 469.
 (pdftex.def)             Requested size: 469.75449pt x 364.75053pt.
-[21 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-ml-training-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-importance-any-1.pdf, id=251, 511.9125pt x 511.9125pt
->
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-importance-any-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-importance-any-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-importance-any-1.pdf  used on
- input line 481.
+[21 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-ml-training-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-importance-any-1.pdf, id=255, 511.9125pt x 511.9125pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-importance-any-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-importance-any-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-importance-any-1.pdf  used on inp
+ut line 481.
 (pdftex.def)             Requested size: 469.75449pt x 469.75449pt.
-[22 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-importance-any-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-importance-severe-1.pdf, id=266, 511.9125pt x 511.912
-5pt>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-importance-severe-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-importance-severe-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-importance-severe-1.pdf  used
- on input line 495.
+[22 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-importance-any-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-importance-severe-1.pdf, id=270, 511.9125pt x 511.9125pt>
+
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-importance-severe-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-importance-severe-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-importance-severe-1.pdf  used on 
+input line 495.
 (pdftex.def)             Requested size: 469.75449pt x 469.75449pt.
-[23 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-importance-severe-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-importance-lufo-1.pdf, id=282, 511.9125pt x 511.9125p
-t>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-importance-lufo-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-importance-lufo-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-importance-lufo-1.pdf  used o
-n input line 509.
+[23 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-importance-severe-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-importance-lufo-1.pdf, id=286, 511.9125pt x 511.9125pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-importance-lufo-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-importance-lufo-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-importance-lufo-1.pdf  used on in
+put line 509.
 (pdftex.def)             Requested size: 469.75449pt x 469.75449pt.
-[24 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-importance-lufo-1.pdf>]
-<C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_materi
-al_files/figure-latex/fig-importance-sympt-1.pdf, id=297, 511.9125pt x 511.9125
-pt>
-File: C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_m
-aterial_files/figure-latex/fig-importance-sympt-1.pdf Graphic file (type pdf)
-<use C:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-importance-sympt-1.pdf>
-Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision GIT/pa
-per/supplementary_material_files/figure-latex/fig-importance-sympt-1.pdf  used 
-on input line 523.
+[24 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-importance-lufo-1.pdf>]
+<C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_material_f
+iles/figure-latex/fig-importance-sympt-1.pdf, id=301, 511.9125pt x 511.9125pt>
+File: C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_mater
+ial_files/figure-latex/fig-importance-sympt-1.pdf Graphic file (type pdf)
+<use C:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-importance-sympt-1.pdf>
+Package pdftex.def Info: C:/Users/piotr/Desktop/Covild 6 months revision/paper/
+supplementary_material_files/figure-latex/fig-importance-sympt-1.pdf  used on i
+nput line 523.
 (pdftex.def)             Requested size: 469.75449pt x 469.75449pt.
-[25 <c:/Users/piotr/Desktop/Covild 6 months revision GIT/paper/supplementary_ma
-terial_files/figure-latex/fig-importance-sympt-1.pdf>] (./supplementary_materia
-l.aux)
+[25 <c:/Users/piotr/Desktop/Covild 6 months revision/paper/supplementary_materi
+al_files/figure-latex/fig-importance-sympt-1.pdf>] (./supplementary_material.au
+x)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1334,12 +1326,12 @@ Package rerunfilecheck Info: File `supplementary_material.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  14042 strings out of 480331
- 239110 string characters out of 5896206
- 586032 words of memory out of 5000000
+ 238730 string characters out of 5896206
+ 587032 words of memory out of 5000000
  31572 multiletter control sequences out of 15000+600000
  456075 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,10n,63p,1048b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,10n,63p,1044b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/piotr/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.e
 nc}{c:/Users/piotr/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.
 enc}{c:/Users/piotr/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ma
@@ -1355,10 +1347,10 @@ X/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/piotr/AppData/Roaming/Tin
 yTeX/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/Users/piotr/AppData/Roaming/
 TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/piotr/AppData/Roa
 ming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on supplementary_material.pdf (25 pages, 509680 bytes).
+Output written on supplementary_material.pdf (25 pages, 747651 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 294 compressed objects within 3 object streams
+ 382 PDF objects out of 1000 (max. 8388607)
+ 292 compressed objects within 3 object streams
  52 named destinations out of 1000 (max. 500000)
  92 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,6 +10,11 @@
   require(gmodels)
   require(vcd)
   require(coxed)
+  require(rlang)
+  require(ggplotify)
+  require(nVennR)
+  require(cowplot)
+  require(magick)
 
 # data import and wrangling -----
 
@@ -236,9 +241,9 @@
     plotting_tbl <- plotting_tbl %>% 
       mutate(variable = globals$mod_var_labels[variable], 
              variable = stri_replace(variable, fixed = '\n', replacement = ' '), 
-             var_label = paste0(variable, ', n = ', n_level, 
+             var_label = paste0(variable, ', n = ', n, 
                                 '\nref: no ', stri_replace(decapitalize(variable), fixed = 'any ', replacement = ''), 
-                                ', n = ', n_complete - n_level), 
+                                ', n = ', n_complete - n), 
              var_label = stri_replace(var_label, fixed = 'no iCU', replacement = 'no ICU'), 
              var_label = stri_replace(var_label, fixed = 'no >', replacement = '\u2264'), 
              var_label = stri_replace(var_label, fixed = 'no over', replacement = '\u2264'),
@@ -246,6 +251,7 @@
              var_label = stri_replace(var_label, fixed = 'Over', replacement = '>'), 
              var_label = stri_replace(var_label, fixed = 'cKD', replacement = 'CKD'), 
              var_label = stri_replace(var_label, fixed = 'no anti-S1/S2 IgG Q1', replacement = 'anti-S1/S2 IgG Q2 - Q4'), 
+             var_label = stri_replace(var_label, fixed = 'no male', replacement = 'female'), 
              est_label = paste0(signif(estimate, 3), ' [', signif(lower_ci, 3), ' - ', signif(upper_ci, 3), ']'))
     
     ## forest plot
@@ -472,6 +478,82 @@
     
   }
   
+
+  plot_n_venn <- function(data, 
+                          id_var = 'ID', 
+                          overlap_vars = c('sympt_present', 'lung_function_impaired', 'CT_findings'), 
+                          subset_names = overlap$var_labels[overlap_vars], 
+                          fill_color = unname(overlap$var_colors[overlap_vars]), 
+                          plot_title = NULL, 
+                          plot_tag = NULL, 
+                          legend_position = 'right', 
+                          opacity = 0.2, 
+                          borderWidth = 2, 
+                          labelRegions = FALSE, 
+                          fontScale = 2, ...) {
+    
+    ## plots a Venn diagram employing nVennR
+
+    subset_names <- stri_replace(subset_names, fixed = '\n', replacement = ' ')
+    
+    events <- overlap_vars %>% 
+      map(~filter(data, .data[[.x]] == 1)[[id_var]]) %>% 
+      set_names(subset_names)
+    
+    temp_file <- sample(LETTERS, 5, replace = TRUE) %>% 
+      paste(collapse = '') %>% 
+      paste0('.svg')
+    
+    venn_plot <- plotVenn(sets = events, 
+                          showPlot = TRUE, 
+                          systemShow = FALSE, 
+                          showLegend = FALSE, 
+                          outFile = temp_file, 
+                          setColors = fill_color, 
+                          opacity = opacity, 
+                          borderWidth = borderWidth, 
+                          labelRegions = labelRegions, 
+                          fontScale = fontScale, ...)
+    
+    gg_plot <- plot_grid(ggdraw() + 
+                           draw_image(image_read_svg(temp_file)))
+    
+    file.remove(temp_file)
+    
+    gg_plot <- plot_grid(ggdraw() + 
+                           draw_text(text = plot_title, 
+                                     size = 8, 
+                                     fontface = 'bold'), 
+                         gg_plot, 
+                         ggdraw() + 
+                           draw_text(text = plot_tag, 
+                                     size = 8, 
+                                     fontface = 'plain'), 
+                         nrow = 3, 
+                         rel_heights = c(0.1, 0.8, 0.1))
+    
+    ## the legend will be obtain ed from a 'fake plot'
+    
+    gg_legend <- tibble(subset = factor(subset_names, levels = rev(subset_names)), 
+                       n = 1) %>% 
+      ggplot(aes(x = subset_names, 
+                 y = n, 
+                 fill = subset_names)) + 
+      geom_bar(stat = 'identity', 
+               alpha = if(2.5*opacity > 1) 1 else 2.5*opacity, 
+               size = borderWidth) + 
+      scale_fill_manual(values = rev(tolower(fill_color)), 
+                        name = '') + 
+      globals$common_theme + 
+      theme(legend.position = legend_position)
+    
+    gg_legend <- get_legend(gg_legend)
+    
+    list(plot = gg_plot, 
+         legend = gg_legend)
+   
+  }
+
   get_kappa <- function(data, variable1, variable2, kappa_only = TRUE, chisq = TRUE) {
     
     ## calculates proportions and unweighted Cohen's Kappa for two variables
@@ -1141,7 +1223,7 @@
       ggplot(aes(x = method1, 
                  y = method2, 
                  fill = rho)) + 
-      geom_tile() + 
+      geom_tile(color = 'black') + 
       geom_text(aes(label = signif(rho, 2)), 
                 size = 2.75) + 
       globals$common_theme + 

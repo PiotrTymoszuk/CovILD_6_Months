@@ -4,10 +4,8 @@
   
 # tools ----
   
-  c('./tools/sys_tools.R', 
-    './tools/project_tools.R') %>% 
-    walk(source)
-  
+  source('./tools/project_tools.R')
+
   library(writexl)
   library(figur) ## available at https://github.com/PiotrTymoszuk/figur
   
@@ -20,7 +18,8 @@
     './paper scripts/paper_tables.R', 
     './paper scripts/paper_figures.R ', 
     './paper scripts/deploy_paper.R') %>% 
-    walk(source)
+    source_all(message = TRUE, 
+               crash = TRUE)
   
 # END -----
   

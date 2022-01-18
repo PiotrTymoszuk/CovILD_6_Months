@@ -190,7 +190,7 @@
   paper_figures$som_outcomes <- plot_grid(paper_figures$som_outcomes$top_panel, 
                                           paper_figures$som_outcomes$bottom_panel, 
                                           nrow = 2, 
-                                          rel_heights = c(0.4, 0.6), 
+                                          rel_heights = c(0.45, 0.55), 
                                           labels = LETTERS, 
                                           label_size = 10) %>% 
     as_figure(label = 'figure_8_som_outcome', 
@@ -244,10 +244,10 @@
   insert_msg('Figure 3 - supplement 1: overlap between the variables, any CT abnormalities')
   
   suppl_figures$outcome_overlap_anyCT <- overlap$venn$CT_findings %>% 
+    map(~.x$plot) %>% 
+    c(., list(overlap$venn$CT_findings[[1]]$legend)) %>% 
     plot_grid(plotlist = ., 
-              align = 'hv', 
-              ncol = 2,  
-              label_size = 10) %>% 
+              ncol = 2) %>% 
     as_figure(label = 'figure3_supplement1', 
               w = 180, 
               h = 190)
@@ -257,10 +257,10 @@
   insert_msg('Figure 3 - supplement 2: overlap between the variables, moderate - severe abnormalities')
   
   suppl_figures$outcome_overlap_sev <- overlap$venn$CTsevabove5 %>% 
+    map(~.x$plot) %>% 
+    c(., list(overlap$venn$CTsevabove5[[1]]$legend)) %>% 
     plot_grid(plotlist = ., 
-              align = 'hv', 
-              ncol = 2,  
-              label_size = 10) %>% 
+              ncol = 2) %>% 
     as_figure(label = 'figure3_supplement2', 
               w = 180, 
               h = 190)
@@ -270,7 +270,10 @@
   insert_msg('Figure 3 - supplement 3: outcome kappa')
   
   suppl_figures$outcome_kappa <- cov_lung$distribution$plots %>% 
-    map(~.x + theme(legend.position = 'none')) %>% 
+    map(~.x + 
+          theme(legend.position = 'none', 
+                axis.title.x = globals$common_text) + 
+          labs(x = 'Time post-COVID-19, days')) %>% 
     c(list(legend = get_legend(cov_lung$distribution$plots[[1]] + 
                                  labs(fill = 'CT abnormality\ngrading')))) %>% 
     plot_grid(plotlist = ., 
@@ -315,7 +318,8 @@
                                                              '\n\nObervations: n = ', 
                                                              nobs(ft_clust$test_clust$clust_obj)$variables)) + 
                                            theme(plot.subtitle = element_blank(), 
-                                                 legend.position = 'bottom')) %>% 
+                                                 legend.position = 'bottom', 
+                                                 axis.text = element_text(size = 7))) %>% 
     as_figure(label = 'figure6_supplement2', 
               w = 180, 
               h = 240)
@@ -439,6 +443,7 @@
                                                 'rf_importance_plots', 
                                                 'glmnet_importance_plots')] %>% 
     map(~.x$CT_findings_V3) %>% 
+    map(~.x + theme(plot.title.position = 'plot')) %>% 
     plot_grid(plotlist = ., 
               align = 'hv', 
               labels = LETTERS, 
@@ -448,6 +453,7 @@
                                                    'rf_importance_plots', 
                                                    'glmnet_importance_plots')] %>% 
     map(~.x$CTsevabove5_V3) %>% 
+    map(~.x + theme(plot.title.position = 'plot')) %>% 
     plot_grid(plotlist = ., 
               align = 'hv', 
               labels = LETTERS, 
@@ -457,6 +463,7 @@
                                               'rf_importance_plots', 
                                               'glmnet_importance_plots')] %>% 
     map(~.x$lung_function_impaired_V3) %>% 
+    map(~.x + theme(plot.title.position = 'plot')) %>% 
     plot_grid(plotlist = ., 
               align = 'hv', 
               labels = LETTERS, 
@@ -466,6 +473,7 @@
                                                   'rf_importance_plots', 
                                                   'glmnet_importance_plots')] %>% 
     map(~.x$sympt_present_V3) %>% 
+    map(~.x + theme(plot.title.position = 'plot')) %>% 
     plot_grid(plotlist = ., 
               align = 'hv', 
               labels = LETTERS, 
@@ -496,13 +504,28 @@
   suppl_figures <- suppl_figures %>% 
     map(convert, to = 'in')
   
-  paper_figures %>% 
-    walk(save_figure, 
-         path = './paper/figures')
+  list(paper_figures, 
+       device = list(cairo_pdf, 
+                     cairo_pdf, 
+                     cairo_pdf, 
+                     cairo_pdf, 
+                     cairo_pdf, 
+                     cairo_pdf, 
+                     cairo_pdf, 
+                     cairo_pdf, 
+                     cairo_pdf, 
+                     'pdf')) %>% 
+    pwalk(save_figure, 
+         path = './paper/figures', 
+         family = 'Helvetica', 
+         dpi = 600)
   
   suppl_figures %>% 
     walk(save_figure, 
-         path = './paper/supplementary figures')
+         path = './paper/supplementary figures', 
+         device = cairo_pdf, 
+         family = 'Helvetica', 
+         dpi = 600)
 
 # END ----
   

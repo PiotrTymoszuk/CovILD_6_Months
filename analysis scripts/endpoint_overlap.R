@@ -49,14 +49,16 @@
   overlap$venn$CT_findings <- list(data = overlap$analysis_tbl,
                                    plot_title = c('60 days', '100 days', '180 days'), 
                                    plot_tag = overlap$n_tags) %>% 
-    pmap(plot_overlap_venn, 
-         overlap_vars = c('sympt_present', 'lung_function_impaired', 'CT_findings'))
-  
+    pmap(plot_n_venn, 
+         overlap_vars = c('sympt_present', 'lung_function_impaired', 'CT_findings'), 
+         fill_color = c('SteelBlue', 'Plum', 'Coral'))
+
   overlap$venn$CTsevabove5 <- list(data = overlap$analysis_tbl,
                                    plot_title = c('60 days', '100 days', '180 days'), 
                                    plot_tag = overlap$n_tags) %>% 
-    pmap(plot_overlap_venn, 
-         overlap_vars = c('sympt_present', 'lung_function_impaired', 'CTsevabove5'))
+    pmap(plot_n_venn, 
+         overlap_vars = c('sympt_present', 'lung_function_impaired', 'CTsevabove5'), 
+         fill_color = c('SteelBlue', 'Plum', 'BurlyWood'))
   
 # Cohen's Kappa -----
   
